@@ -48,12 +48,11 @@ const faqs = [
 ];
 
 export default function Page() {
-  const [expandedFaqIndex, setExpandedFaqIndex] = useState(null);
+  const [expandedFaqIndex, setExpandedFaqIndex] = useState<number | null>(null);
 
-  const toggleFaq = (index) => {
+  const toggleFaq = (index: number) => {
     setExpandedFaqIndex(index === expandedFaqIndex ? null : index);
   };
-
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
