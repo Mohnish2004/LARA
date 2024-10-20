@@ -46,19 +46,6 @@ export const DATA = {
 
         navbar: true,
       },
-      X: {
-        name: "X",
-        url: "",
-        icon: Icons.x,
-
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "",
-        icon: Icons.youtube,
-        navbar: true,
-      },
       email: {
         name: "Send Email",
         url: "isoltani@ucdavis.edu",

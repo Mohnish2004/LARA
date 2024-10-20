@@ -24,7 +24,7 @@ export default function Publication() {
     <section className="max-w-6xl mx-auto p-2">
       <h1 className="font-medium text-4xl mb-3 tracking-tighter">All Publications</h1>
       <Link href="/people">
-      <AvatarCircles numPeople={20} avatarUrls={avatarUrls} />;
+      <AvatarCircles numPeople={20} avatarUrls={avatarUrls} />
       </Link>
       <BlurFade delay={BLUR_FADE_DELAY}>
 
