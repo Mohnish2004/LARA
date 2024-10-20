@@ -40,7 +40,7 @@ export default function Navbar() {
         {Object.entries(DATA.contact.social)
           .filter(([_, social]) => social.navbar)
           .map(([name, social]) => (
-            <DockIcon key={name}>
+            <DockIcon key={name} className="hidden sm:flex">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link
