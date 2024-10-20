@@ -4,7 +4,7 @@ import { DATA } from "@/data/resume";
 export const metadata = {
   title: "publications",
   description:
-"All of lara lab's publications since 2020",
+"All of lara labs publications since 2020",
 };
 
 const BLUR_FADE_DELAY = 0.04;
@@ -20,7 +20,7 @@ export default function Publication() {
         Contact us
       </h1>
       <p className="mt-1 text-gray-600 dark:text-neutral-400">
-        We'd love to talk about how we can help you.
+        We&apos;d love to talk about how we can help you.
       </p>
     </div>
 
@@ -35,7 +35,7 @@ export default function Publication() {
           <svg className="shrink-0 size-6 mt-1.5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
           <div className="grow">
             <h3 className="font-semibold text-gray-800 dark:text-neutral-200">Knowledgebase</h3>
-            <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">We're here to help with any questions or code.</p>
+            <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">We&apos;re here to help with any questions or code.</p>
             <a className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="#">
               Contact support
               <svg className="shrink-0 size-2.5 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
