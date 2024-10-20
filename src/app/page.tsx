@@ -84,7 +84,7 @@ export default function Page() {
       </section>
 
       <section id="projects">
-        <div className="space-y-12 w-full py-12">
+        <div className="space-y-4 w-full py-4">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
@@ -119,9 +119,9 @@ export default function Page() {
 
       {/* FAQ Section */}
       <section id="faq">
-        <div className="space-y-6 w-full py-2">
+        <div className="space-y-6 w-full mb-20">
           <BlurFade delay={BLUR_FADE_DELAY * 15}>
-            <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">FAQ</h2>
+            <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">Frequently asked questions</h2>
           </BlurFade>
           <div className="grid grid-cols-1 gap-4 max-w-[800px] mx-auto">
             {faqs.map((faq, id) => (
