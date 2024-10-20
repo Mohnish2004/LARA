@@ -1,3 +1,4 @@
+"use client";
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
@@ -8,125 +9,89 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { useState } from "react";
 
-const BLUR_FADE_DELAY = 0.04;
+const BLUR_FADE_DELAY = 0.001;
+
+// FAQ Data
+const faqs = [
+  {
+    question: "How can I join the LARA Lab?",
+    answer:
+      "We are always looking for motivated graduate students. Please send your CV and cover letter to isoltani@ucdavis.edu with the subject “Open PhD/Masters Position.”",
+  },
+  {
+    question: "What are the main research areas?",
+    answer:
+      "LARA Lab focuses on AI, robotics, automation, autonomous systems, industrial diagnostics, and healthcare solutions.",
+  },
+  {
+    question: "Are there any open positions?",
+    answer:
+      "Yes, we offer positions for PhD and Master’s students with experience in machine learning, robotics (ROS), and optics.",
+  },
+  {
+    question: "What kind of projects does LARA work on?",
+    answer:
+      "Our projects range from autonomous driving systems and industrial automation to healthcare diagnostics and nano-robotics.",
+  },
+  {
+    question: "How can I access the lab’s publications?",
+    answer:
+      "Our latest research papers and publications are available on our Google Scholar profile. Visit our ‘Publications’ page for more details.",
+  },
+  {
+    question: "What collaboration opportunities are available at LARA Lab?",
+    answer:
+      "LARA Lab collaborates with industry partners, academic institutions, and research organizations. Please contact us for more information.",
+  },
+];
 
 export default function Page() {
+  const [expandedFaqIndex, setExpandedFaqIndex] = useState(null);
+
+  const toggleFaq = (index) => {
+    setExpandedFaqIndex(index === expandedFaqIndex ? null : index);
+  };
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
-              />
-              <BlurFadeText
-                className="max-w-[600px] md:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              <img src="./13.png" alt="" draggable="false"></img>
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
-            </BlurFade>
           </div>
         </div>
       </section>
+
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
+          <h1 className="text-2xl font-bold">About</h1>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          <Markdown className="prose max-w-full py-1 text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
             {DATA.summary}
           </Markdown>
         </BlurFade>
-      </section>
-      <section id="work">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
-          </BlurFade>
-          {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-            >
-              <ResumeCard
-                key={work.company}
-                logoUrl={work.logoUrl}
-                altText={work.company}
-                title={work.company}
-                subtitle={work.title}
-                href={work.href}
-                badges={work.badges}
-                period={`${work.start} - ${work.end ?? "Present"}`}
-                description={work.description}
-              />
+        <div className="flex flex-wrap py-2 gap-1">
+          {DATA.skills.map((skill, id) => (
+            <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+              <Badge key={skill}>{skill}</Badge>
             </BlurFade>
           ))}
         </div>
       </section>
-      <section id="education">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Education</h2>
-          </BlurFade>
-          {DATA.education.map((education, id) => (
-            <BlurFade
-              key={education.school}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-            >
-              <ResumeCard
-                key={education.school}
-                href={education.href}
-                logoUrl={education.logoUrl}
-                altText={education.school}
-                title={education.school}
-                subtitle={education.degree}
-                period={`${education.start} - ${education.end}`}
-              />
-            </BlurFade>
-          ))}
-        </div>
-      </section>
-      <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
-          </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
+
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">
+                  Latest Work
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
-                </p>
               </div>
             </div>
           </BlurFade>
@@ -142,7 +107,7 @@ export default function Page() {
                   title={project.title}
                   description={project.description}
                   dates={project.dates}
-                  tags={project.technologies}
+                  tags={project.authors}
                   image={project.image}
                   video={project.video}
                   links={project.links}
@@ -152,50 +117,39 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="hackathons">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Hackathons
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in university, I attended{" "}
-                  {DATA.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
-                </p>
-              </div>
-            </div>
+
+      {/* FAQ Section */}
+      <section id="faq">
+        <div className="space-y-6 w-full py-2">
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
+            <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">FAQ</h2>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
-                <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
+          <div className="grid grid-cols-1 gap-4 max-w-[800px] mx-auto">
+            {faqs.map((faq, id) => (
+              <BlurFade
+                key={faq.question}
+                delay={BLUR_FADE_DELAY * 16 + id * 0.05}
+              >
+                <div
+                  onClick={() => toggleFaq(id)}
+                  className={`p-4 border rounded-lg transition-shadow cursor-pointer ${
+                    expandedFaqIndex === id ? "shadow-lg" : "hover:shadow-lg"
+                  }`}
                 >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
-                  />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade>
+                  <h3 className="">{faq.question}</h3>
+                  {expandedFaqIndex === id && (
+                    <p className="font-semibold text-gray-800 dark:text-neutral-200 mt-2">
+                      {faq.answer}
+                    </p>
+                  )}
+                </div>
+              </BlurFade>
+            ))}
+          </div>
         </div>
       </section>
-      <section id="contact">
+
+      {/* <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
@@ -205,21 +159,17 @@ export default function Page() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
-                <Link
-                  href={DATA.contact.social.X.url}
-                  className="text-blue-500 hover:underline"
-                >
-                  with a direct question on twitter
-                </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-sm/relaxed lg:text-base/relaxed sm:text-sm/relaxed">
+                We are always looking for motivated and talented graduate students. If you are interested in our research, please send your CV to isoltani@ucdavis.edu. On the subject line, include "Open PhD/Masters Position".
+              </p>
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-sm/relaxed lg:text-base/relaxed sm:text-sm/relaxed">
+                Prior experience in either of the following topics is necessary: Machine Learning, Optics, Instrumentation and Control, Machine Vision. If you are interested in machine learning research, you should have prior experience with Pytorch or Tensorflow. If you are interested in Robotics, prior experience with ROS is needed.
               </p>
             </div>
           </BlurFade>
         </div>
-      </section>
+      </section> */}
+
     </main>
   );
 }
