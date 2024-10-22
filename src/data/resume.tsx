@@ -370,6 +370,29 @@ projects: [
           icon: <Icons.github className="size-3" />,
         },
       ],
+    },{
+      title: "Attention Transformers for Bimanual Manipulation",
+      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:YFjsv_pBGBYC",
+      dates: "2021 - Ongoing",
+      active: true,
+      description:
+        "Attention Transformers for Bimanual Manipulation",
+      authors: ["Sebastian Rivera", "Zoey Baker"],
+      year: "2021",
+      image: "/test.png",
+      video: "",
+      links: [
+        {
+          type: "Website",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:YFjsv_pBGBYC",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/magicuidesign/magicui",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
     },
   ],
 
@@ -423,4 +446,310 @@ projects: [
         "Served as a panelist discussing the ethical implications of humanoid robots in society. Engaged with researchers on advancements in humanoid locomotion, manipulation, and interaction with human environments.",
     },
   ],
+
+
+
+
+  allwork: [
+    {
+      company: "Transportation Research Interdisciplinary Perspectives",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Presenter",
+      logoUrl: "",
+      start: "2024",
+      end: "2024",
+      description:
+        "Presented the project titled 'Assessing the Impact of Driver Compliance on Traffic Flow and Safety in Work Zones Amid Varied Mixed Autonomy Scenarios'."
+    },
+    {
+      company: "IEEE Robotics and Automation Letters",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Presenter",
+      logoUrl: "",
+      start: "2024",
+      end: "2024",
+      description:
+        "Presented the project titled 'Hierarchical End-to-End Autonomous Navigation through Few-Shot Waypoint Detection'."
+    },
+    {
+      company: "Opthalmology Science",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2024",
+      end: "2024",
+      description:
+        "Co-authored the project 'Performance of Automated Machine Learning in Predicting Outcomes of Pneumatic Retinopexy'."
+    },
+    {
+      company: "Transactions of Neural Networks and Learning Systems",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2023",
+      end: "2023",
+      description:
+        "Co-authored the project 'Targeted Collapse Regularized Autoencoder for Anomaly Detection: Black Hole at the Center'."
+    },
+    {
+      company: "Sensors",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2023",
+      end: "2023",
+      description:
+        "Co-authored the project 'Deep Bayesian-Assisted Keypoint Detection for Pose Estimation in Assembly Automation'."
+    },
+    {
+      company: "IEEE Transactions on Neural Networks and Learning Systems",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2022",
+      end: "2022",
+      description:
+        "Co-authored the project 'Memory Augmented Generative Adversarial Networks for Anomaly Detection'."
+    },
+    {
+      company: "Journal of Vacuum Science & Technology B",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2017",
+      end: "2017",
+      description:
+        "Co-authored the project 'Active Scanning Probes: A Versatile Toolkit for Fast Imaging and Emerging Nanofabrication'."
+    },
+    {
+      company: "Ultramicroscopy",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2016",
+      end: "2016",
+      description:
+        "Co-authored the project 'Design and Control of a Multi-Actuated Atomic Force Microscope for High-Speed, Large-Range Imaging'."
+    },
+    {
+      company: "Nanotechnology",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2015",
+      end: "2015",
+      description:
+        "Co-authored the project 'Multi-Eigenmode Control for High Material Contrast in Bimodal and Higher Harmonic Atomic Force Microscopy'."
+    },
+    {
+      company: "ACS NANO",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2015",
+      end: "2015",
+      description:
+        "Co-authored the project 'Aggrecan Nanoscale Solid–Fluid Interactions as a Primary Determinant of Cartilage Dynamic Mechanical Properties'."
+    },
+    {
+      company: "Biophysical Journal",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2013",
+      end: "2013",
+      description:
+        "Co-authored the project 'High-Bandwidth AFM-Based Rheology Reveals That Cartilage is Most Sensitive to High Loading Rates at Early Stages of Impairment'."
+    },
+    {
+      company: "Review of Scientific Instruments",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2011",
+      end: "2011",
+      description:
+        "Co-authored the project 'Compensator Design for Improved Counterbalancing in High-Speed Atomic Force Microscopy'."
+    },
+    {
+      company: "Measurement Science and Technology",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2010",
+      end: "2010",
+      description:
+        "Co-authored two projects: 'In-Line Identification of Oil Debris Signals: An Adaptive Subband Filtering Approach' and 'Parameter-Free Bearing Fault Detection Based on Maximum Likelihood Estimation and Differentiation'."
+    },
+    {
+      company: "Smart Materials and Structures",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2010",
+      end: "2010",
+      description:
+        "Co-authored the project 'Teager Energy Operator for Multi-Modulation Extraction and Its Application for Gearbox Fault Detection'."
+    },
+    {
+      company: "Mechanical Systems and Signal Processing",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2010",
+      end: "2010",
+      description:
+        "Co-authored two projects: 'An Energy Operator Approach to Joint Application of Amplitude and Frequency-Demodulations for Bearing Fault Detection' and 'A Joint Resonance Frequency Estimation and In-Band Noise Reduction Method for Enhancing the Detectability of Bearing Fault Signals'."
+    },
+    {
+      company: "Journal of Sound and Vibration",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2007",
+      end: "2007",
+      description:
+        "Co-authored the project 'A Smoothness Index Guided Approach to Wavelet Parameter Selection in Signal De-Noising and Fault Detection'."
+    },
+    {
+      company: "International Journal of Pharmaceutics",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2006",
+      end: "2006",
+      description:
+        "Co-authored the project 'Performance Comparison of Neural Network Training Algorithms in Modeling of Bimodal Drug Delivery'."
+    },
+    {
+      company: "International Conference on Robotic and Automation (ICRA)",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2025",
+      end: "2025",
+      description:
+        "Co-authored the project 'Active Vision Might Be All You Need: Exploring Active Vision in Bimanual Robotic Manipulation'."
+    },
+    {
+      company: "Conference on Robot Learning (CoRL)",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2024",
+      end: "2024",
+      description:
+        "Co-authored the project 'InterACT: Inter-Dependency Aware Action Chunking with Hierarchical Attention Transformers for Bimanual Manipulation'."
+    },
+    {
+      company: "Machine Learning for Autonomous Driving Symposium",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2023",
+      end: "2023",
+      description:
+        "Co-authored the project 'Hierarchical End-to-End Autonomous Navigation through Few-Shot Waypoint Detection'."
+    },
+    {
+      company: "Visual Anomaly and Novelty Detection (VAND workshop) CVPR",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2023",
+      end: "2023",
+      description:
+        "Co-authored the project 'Anomaly Detection with Domain Adaptation'."
+    },
+    {
+      company: "NeurIPS",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2022",
+      end: "2022",
+      description:
+        "Co-authored the project 'One Shot Learning of Visual Path Navigation for Autonomous Vehicles'."
+    },
+    {
+      company: "ASME International Mechanical Engineering Congress and Exposition",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2020",
+      end: "2020",
+      description:
+        "Co-authored the project 'Design and Implementation of Vehicle Tracking System Using a Youla Controller Output Observer'."
+    },
+    {
+      company: "24th European Conference on Artificial Intelligence",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "2019",
+      end: "2019",
+      description:
+        "Co-authored the project 'Generative Adversarial Networks with Anomaly Augmentation'."
+    },
+    {
+      company: "American Control Conference",
+      href: "",
+      badges: [],
+      location: "",
+      title: "Co-author",
+      logoUrl: "",
+      start: "Multiple Years",
+      end: "Multiple Years",
+      description:
+        "Co-authored various projects: 'Induced Vibration Contact Detection for Minimizing Cantilever Tip-Sample Interaction Forces in Jumping Mode Atomic Force Microscopy' (2017), 'A Study on the Effectiveness of PI Control for Multi-Actuated Atomic Force Microscopy' (2015), 'Estimator Based Multi-Eigenmode Control of Cantilevers in Multifrequency Atomic Force Microscopy' (2015), 'Control Design for Division and Compensation with Application to High-Speed/Large-Range Nano-Positioning' (2014), 'A Vibration Suppression Approach to High-Speed Atomic Force Microscopy' (2012), and 'Enhancement of Signals Collected by Oil Debris Sensors' (2008)."
+    }
+  ]
 } as const;

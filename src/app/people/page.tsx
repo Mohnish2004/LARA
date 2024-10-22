@@ -2,7 +2,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import Link from "next/link";
 import { DATA } from "@/data/resume";
 export const metadata = {
-  title: "people",
+  title: "People",
   description:
     "A community of software engineers, designers, and creatives sharing their experiences, tips, and inspiration.",
 };
@@ -43,7 +43,7 @@ const people = {
   ],
   undergraduateResearchers: [
     { name: "Mohnish Gopi", major: "Computer Science", image: "/pics/MohnishGopi.jpg" },
-    { name: "Kiana Amini-Naeini", major: "Cognitive Sciences", image: "/pics/KianaAminiNaeini.jpg" },
+    { name: "Kiana Amini-Naeini", major: "Cognitive Sciences", image: "/sam.jpg" },
     { name: "Tyler Beer", major: "Computer Science", image: "/pics/TylerBeer.jpg" },
     { name: "Justin Chang", major: "Computer Science", image: "/pics/JustinChang.jpeg" },
     { name: "Yuyang Chen", major: "Mechanical and Aerospace Engineering", image: "/pics/YuyangChen.jpg" },

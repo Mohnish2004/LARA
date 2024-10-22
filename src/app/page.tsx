@@ -144,7 +144,7 @@ export default function Page() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq">
+      <section id="faq-anchor">
         <div className="space-y-6 w-full mb-20">
           <BlurFade delay={BLUR_FADE_DELAY * 15}>
             <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">Frequently asked questions</h2>

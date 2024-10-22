@@ -2,7 +2,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import Link from "next/link";
 import { DATA } from "@/data/resume";
 export const metadata = {
-  title: "publications",
+  title: "Publications",
   description:
 "All of lara lab's publications since 2020",
 };
