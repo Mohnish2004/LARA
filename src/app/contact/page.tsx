@@ -12,16 +12,11 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Publication() {
   return (
     <section className="max-w-6xl mx-auto p-2">
-
-      <BlurFade delay={BLUR_FADE_DELAY}>
-        <div className="text-center">
-      <h1 className="font-medium text-4xl mb-3 tracking-tighter">
-        Contact us
-      </h1>
-      <p className="mt-1 ">
+      <h1 className="font-medium text-4xl mb-2 tracking-tighter">Contact us</h1>
+      <p>
         We&apos;d love to talk about how we can help you.
       </p>
-    </div>
+       <BlurFade delay={BLUR_FADE_DELAY}>
 
     <div className="mt-12 gap-6 lg:gap-16">
 

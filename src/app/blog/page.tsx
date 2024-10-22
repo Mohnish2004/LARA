@@ -13,10 +13,19 @@ export default async function BlogPage() {
   const posts = await getBlogPosts();
 
   return (
-    <section>
+    <section className="max-w-6xl mx-auto p-2">
+      <h1 className="font-medium text-4xl mb-8 tracking-tighter">Blogs</h1>
       <BlurFade delay={BLUR_FADE_DELAY}>
-        <h1 className="font-medium text-2xl mb-8 tracking-tighter">blog</h1>
-      </BlurFade>
+        <div className="flex-col flex flex-1 space-y-1.5">
+          <img 
+            src="./about.jpg" 
+            alt="" 
+            draggable="false" 
+            className="rounded-lg w-full h-40 mb-6 object-cover" 
+          />
+        </div>
+        </BlurFade>
+
       {posts
         .sort((a, b) => {
           if (

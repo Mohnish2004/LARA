@@ -10,10 +10,15 @@ import { ProjectCard } from "@/components/project-card";
 import AvatarCircles from "@/components/ui/avatar-circles";
 
 const avatarUrls = [
-  "https://avatars.githubusercontent.com/u/16860528",
-  "https://avatars.githubusercontent.com/u/20110627",
-  "https://avatars.githubusercontent.com/u/106103625",
-  "https://avatars.githubusercontent.com/u/59228569",
+
+  "/pics/MohnishGopi.jpg",
+
+  "/pics/TylerBeer.jpg",
+  
+  "/pics/IanChuang.jpg",
+  
+  "/pics/andrewlee.png",
+  
 ];
 
 const BLUR_FADE_DELAY = 0.04;
