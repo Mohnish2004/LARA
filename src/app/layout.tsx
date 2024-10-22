@@ -68,6 +68,7 @@ export default function RootLayout({
           </TooltipProvider>
         </ThemeProvider>
       </body>
+      
     </html>
   );
 }

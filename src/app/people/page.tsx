@@ -96,7 +96,7 @@ const people = {
 
 export default function People() {
   return (
-    <section className="max-w-6xl mx-auto p-2">
+    <section className="max-w-6xl mx-auto p-2 mb-16 ">
       <h1 className="font-medium text-4xl mb-8 tracking-tighter">Our Team</h1>
       <BlurFade delay={BLUR_FADE_DELAY}>
         <div className="flex-col flex flex-1 space-y-1.5">
@@ -155,6 +155,12 @@ export default function People() {
           </div>
         </div>
       ))}
+              <hr className="border-gray-200 mb-6 dark:border-neutral-800" />
+              <BlurFade delay={BLUR_FADE_DELAY * 30}>
+            <p className="text-xs mb-20 tracking-tighter border-gray-200 dark:border-neutral-800">
+              Crafted with ❤️ by <a href="https://mohnishgopi.com/" target="_blank" className="text-blue-500 hover:underline">Mohnish Gopi</a>
+            </p>
+          </BlurFade>
     </section>
   );
 }

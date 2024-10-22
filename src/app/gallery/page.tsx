@@ -90,5 +90,6 @@ export default function GalleryPage() {
         </div>
       </BlurFade>
     </section>
+    
   );
 }

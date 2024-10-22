@@ -145,7 +145,7 @@ export default function Page() {
 
       {/* FAQ Section */}
       <section id="faq-anchor">
-        <div className="space-y-6 w-full mb-20">
+        <div className="space-y-6 w-full mb-16">
           <BlurFade delay={BLUR_FADE_DELAY * 15}>
             <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">Frequently asked questions</h2>
           </BlurFade>
@@ -172,7 +172,15 @@ export default function Page() {
             ))}
           </div>
         </div>
+        <hr className="border-gray-200 mb-6 dark:border-neutral-800" />
+      <BlurFade delay={BLUR_FADE_DELAY * 30}>
+            <p className="text-xs mb-20 tracking-tighter border-gray-200 dark:border-neutral-800">
+              Crafted with ❤️ by <a href="https://mohnishgopi.com/" target="_blank" className="text-blue-500 hover:underline">Mohnish Gopi</a>
+            </p>
+          </BlurFade>
       </section>
+
+
 
       {/* <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">

@@ -50,6 +50,12 @@ export default async function BlogPage() {
             </Link>
           </BlurFade>
         ))}
+              <hr className="border-gray-200 mb-6 dark:border-neutral-800" />
+      <BlurFade delay={BLUR_FADE_DELAY * 30}>
+            <p className="text-xs mb-20 tracking-tighter border-gray-200 dark:border-neutral-800">
+              Crafted with ❤️ by <a href="https://mohnishgopi.com/" target="_blank" className="text-blue-500 hover:underline">Mohnish Gopi</a>
+            </p>
+          </BlurFade>
     </section>
   );
 }
