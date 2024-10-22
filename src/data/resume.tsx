@@ -55,7 +55,10 @@ export const DATA = {
     },
   },
 
-  projects: [
+
+
+  
+projects: [
     {
       title: "InterACT: Inter-dependency Aware Action...",
       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:ns9cj8rnVeAC",
@@ -87,7 +90,7 @@ export const DATA = {
       active: true,
       description:
         "Performance of Automated Machine Learning in Predicting Outcomes of Pneumatic Retinopexy.",
-      authors: ["Alice Brown", "David Wilson"],
+      authors: ["Alice Green", "Bob Brown"],
       year: "2020",
       image: "/test.png",
       video: "",
@@ -111,7 +114,7 @@ export const DATA = {
       active: true,
       description:
         "Targeted collapse regularized autoencoder for anomaly detection: black hole at the center.",
-      authors: ["Mark Johnson", "Emily Davis"],
+      authors: ["Emma White", "Liam Johnson"],
       year: "2021",
       image: "/test.png",
       video: "",
@@ -129,85 +132,13 @@ export const DATA = {
       ],
     },
     {
-      title: "High-Throughput Automated Annotation...",
-      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:R3hNpaxXUhUC",
-      dates: "2022 - Present",
-      active: true,
-      description:
-        "High-throughput automated annotation of visual data for training neural networks used for landmark detection.",
-      authors: ["Robert Walker", "Sophie Brown"],
-      year: "2022",
-      image: "/test.png",
-      video: "",
-      links: [
-        {
-          type: "Website",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:R3hNpaxXUhUC",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-    },
-    {
-      title: "Robotic Manipulation Using an Independently...",
-      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:e5wmG9Sq2KIC",
-      dates: "2021 - 2022",
-      active: false,
-      description:
-        "Robotic manipulation using an independently actuated vision system, an adversarial control scheme, and a multi-tasking deep learning architecture.",
-      authors: ["Chris Anderson", "Jessica Martinez"],
-      year: "2021",
-      image: "/test.png",
-      video: "",
-      links: [
-        {
-          type: "Website",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:e5wmG9Sq2KIC",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-    },
-    {
-      title: "Learning Systems and Methods...",
-      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:RHpTSmoSYBkC",
-      dates: "2021 - 2022",
-      active: false,
-      description:
-        "Learning systems and methods for dynamic task execution using machine learning techniques.",
-      authors: ["Laura Lee", "Michael Green"],
-      year: "2021",
-      image: "/test.png",
-      video: "",
-      links: [
-        {
-          type: "Website",
-          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:RHpTSmoSYBkC",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-    },
-    {
       title: "Hierarchical End-to-End Autonomous...",
       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:JV2RwH3_ST0C",
       dates: "2020 - Ongoing",
       active: true,
       description:
         "Hierarchical end-to-end autonomous navigation through few-shot waypoint detection.",
-      authors: ["Daniel Robinson", "Eve Adams"],
+      authors: ["Sophia Martin", "Oliver Clark"],
       year: "2020",
       image: "/test.png",
       video: "",
@@ -231,7 +162,7 @@ export const DATA = {
       active: true,
       description:
         "CarDreamer: Open-Source Learning Platform for World Model based Autonomous Driving.",
-      authors: ["James Taylor", "Rachel Harris"],
+      authors: ["Michael Hall", "Amelia Thomas"],
       year: "2020",
       image: "/test.png",
       video: "",
@@ -249,14 +180,16 @@ export const DATA = {
       ],
     },
     {
-      title: "Assessing the Impact of Driver Compliance...",
+      title: "Assessing Driver Compliance and Traffic Flow...",
       href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:NMxIlDl6LWMC",
       dates: "2020 - Ongoing",
       active: true,
       description:
-        "Assessing the impact of driver compliance on traffic flow and safety in mixed autonomy work zones.",
-      authors: ["Chris Anderson", "Jessica Martinez"],
+        "Assessing the impact of driver compliance on traffic flow and safety in work zones amid mixed autonomy scenarios.",
+      authors: ["William Wright", "Ava Lee"],
       year: "2020",
+      image: "/test.png",
+      video: "",
       links: [
         {
           type: "Website",
@@ -269,9 +202,174 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
+    },
+    {
+      title: "Performance of Automated ML in Predicting...",
+      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:hMod-77fHWUC",
+      dates: "2020 - Present",
+      active: true,
+      description:
+        "Performance of Automated Machine Learning in Predicting Outcomes of Pneumatic Retinopexy.",
+      authors: ["James Harris", "Charlotte Walker"],
+      year: "2020",
       image: "/test.png",
       video: "",
-
+      links: [
+        {
+          type: "Website",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:hMod-77fHWUC",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/magicuidesign/magicui",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Active Vision Might Be All You Need...",
+      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:O3NaXMp0MMsC",
+      dates: "2021 - Ongoing",
+      active: true,
+      description:
+        "Exploring active vision in bimanual robotic manipulation: Might be all you need.",
+      authors: ["Henry Davis", "Emily Wilson"],
+      year: "2021",
+      image: "/test.png",
+      video: "",
+      links: [
+        {
+          type: "Website",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:O3NaXMp0MMsC",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/magicuidesign/magicui",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Targeted Collapse Regularized Autoencoder...",
+      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:k_IJM867U9cC",
+      dates: "2021 - Ongoing",
+      active: true,
+      description:
+        "Targeted collapse regularized autoencoder for anomaly detection in black hole models.",
+      authors: ["Jack Garcia", "Ella Rodriguez"],
+      year: "2021",
+      image: "/test.png",
+      video: "",
+      links: [
+        {
+          type: "Website",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:k_IJM867U9cC",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/magicuidesign/magicui",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Deep Bayesian-Assisted Keypoint Detection...",
+      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:maZDTaKrznsC",
+      dates: "2021 - Ongoing",
+      active: true,
+      description:
+        "Deep Bayesian-Assisted Keypoint Detection for Pose Estimation in Assembly Automation.",
+      authors: ["Logan Martinez", "Grace Thompson"],
+      year: "2021",
+      image: "/test.png",
+      video: "",
+      links: [
+        {
+          type: "Website",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&citation_for_view=BJ2teVoAAAAJ:maZDTaKrznsC",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/magicuidesign/magicui",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Regularized Cycle Consistent GAN for Anomaly...",
+      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&citation_for_view=BJ2teVoAAAAJ:hFOr9nPyWt4C",
+      dates: "2021 - Present",
+      active: true,
+      description:
+        "Regularized cycle consistent generative adversarial network for anomaly detection.",
+      authors: ["Daniel Lopez", "Mia King"],
+      year: "2021",
+      image: "/test.png",
+      video: "",
+      links: [
+        {
+          type: "Website",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&citation_for_view=BJ2teVoAAAAJ:hFOr9nPyWt4C",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/magicuidesign/magicui",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Memory-Augmented GANs for Anomaly Detection...",
+      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&citation_for_view=BJ2teVoAAAAJ:mB3voiENLucC",
+      dates: "2021 - Present",
+      active: true,
+      description:
+        "Memory-augmented generative adversarial networks for anomaly detection.",
+      authors: ["David Scott", "Layla Turner"],
+      year: "2021",
+      image: "/test.png",
+      video: "",
+      links: [
+        {
+          type: "Website",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&citation_for_view=BJ2teVoAAAAJ:mB3voiENLucC",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/magicuidesign/magicui",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Anomaly Detection with Domain Adaptation...",
+      href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&citation_for_view=BJ2teVoAAAAJ:_Qo2XoVZTnwC",
+      dates: "2021 - Ongoing",
+      active: true,
+      description:
+        "Anomaly detection with domain adaptation in industrial systems.",
+      authors: ["Sebastian Rivera", "Zoey Baker"],
+      year: "2021",
+      image: "/test.png",
+      video: "",
+      links: [
+        {
+          type: "Website",
+          href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&citation_for_view=BJ2teVoAAAAJ:_Qo2XoVZTnwC",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/magicuidesign/magicui",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
     },
   ],
 
