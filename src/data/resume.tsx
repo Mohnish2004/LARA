@@ -457,7 +457,7 @@ projects: [
       badges: [],
       location: "",
       title: "Presenter",
-      logoUrl: "",
+      logoUrl: "https://ars.els-cdn.com/content/image/1-s2.0-S2590198223X00025-cov200h.gif",
       start: "2024",
       end: "2024",
       description:
@@ -469,7 +469,7 @@ projects: [
       badges: [],
       location: "",
       title: "Presenter",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgjPlqAX9WSzWGsmUIZGMYHb80FEguitHbIA&s",
       start: "2024",
       end: "2024",
       description:
@@ -481,7 +481,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://kindcongress.com/wp-content/uploads/2024/02/International-Conference-on-Ophthalmology-Vision-Science-Ophthalmology-Vision-Science-2024.jpg",
       start: "2024",
       end: "2024",
       description:
@@ -505,7 +505,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-aJ5IFFNxY1c8yJoUYp3lppD9kcVCJ0QOPw&s",
       start: "2023",
       end: "2023",
       description:
@@ -517,7 +517,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRROpfShu46ddhyCjNEF7l3newWk1nP2plFYg&s",
       start: "2022",
       end: "2022",
       description:
@@ -529,7 +529,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://publishing.aip.org/wp-content/uploads/2024/04/m_jvb.2024.42.issue-2.largecover.jpeg",
       start: "2017",
       end: "2017",
       description:
@@ -553,7 +553,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://d2cax41o7ahm5l.cloudfront.net/cme/upload-images/Nanotechnology@2k24-59963.png",
       start: "2015",
       end: "2015",
       description:
@@ -565,7 +565,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://pbs.twimg.com/profile_images/1478400051345039363/eJubpjok_400x400.jpg",
       start: "2015",
       end: "2015",
       description:
@@ -577,7 +577,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://pbs.twimg.com/profile_images/681870986782756864/e6FVHnnj_400x400.jpg",
       start: "2013",
       end: "2013",
       description:
@@ -589,7 +589,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnP8GzSdvXtQxTxl8NdfzkXlGNXssijV0Fxg&s",
       start: "2011",
       end: "2011",
       description:
@@ -649,7 +649,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCR0O9XFY5yO0XSf1vhygFma2M5N85M0EdEg&s",
       start: "2006",
       end: "2006",
       description:
@@ -661,7 +661,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://icra40.ieee.org/wp-content/uploads/sites/661/ICRA_logo_24.png",
       start: "2025",
       end: "2025",
       description:
@@ -673,7 +673,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1cUxU91lxXSqWDtM98uYl8bX9vhwbad3mMA&s",
       start: "2024",
       end: "2024",
       description:
@@ -685,7 +685,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRws1B1cdHIzpY-1N8huqf4Typ3vWYno1j4cg&s",
       start: "2023",
       end: "2023",
       description:
@@ -697,7 +697,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI90b0T4IHJMcKhF9rzGwhRk2hwuMqTYPxgA&s",
       start: "2023",
       end: "2023",
       description:
@@ -709,7 +709,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://media.licdn.com/dms/image/v2/C560BAQGWEkUGCcxNYA/company-logo_200_200/company-logo_200_200/0/1631729757935/nipsconference_logo?e=2147483647&v=beta&t=SPxVtiyVXu5K12V0dPtVpJOJ7CX7IyQFfoqSnAG6BM0",
       start: "2022",
       end: "2022",
       description:
@@ -721,7 +721,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8fWjCXRSJawYtBg9GpvsHJk_8zF7kF9I2YA&s",
       start: "2020",
       end: "2020",
       description:
@@ -733,7 +733,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXCWwEZpJWxSWiHIz8lzvsC0bMHUaphPhS1Q&s",
       start: "2019",
       end: "2019",
       description:
@@ -745,7 +745,7 @@ projects: [
       badges: [],
       location: "",
       title: "Co-author",
-      logoUrl: "",
+      logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsUta9O1lNjinV2fDYI1BBEabikB9IJD0eYg&s",
       start: "Multiple Years",
       end: "Multiple Years",
       description:

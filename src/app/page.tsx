@@ -84,30 +84,38 @@ export default function Page() {
       </section>
 
       <section id="work">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">Conferences</h2>          
-          </BlurFade>
-          {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-            >
-              <ResumeCard
-                key={work.company}
-                logoUrl={work.logoUrl}
-                altText={work.company}
-                title={work.company}
-                subtitle={work.title}
-                href={work.href}
-                badges={work.badges}
-                period={work.start}
-                description={work.description}
-              />
-            </BlurFade>
-          ))}
+  <div className="flex min-h-0 flex-col gap-y-3">
+    <BlurFade delay={BLUR_FADE_DELAY * 5}>
+      <h2 className="text-2xl font-bold tracking-tighter sm:text-2xl">Conferences</h2>
+    </BlurFade>
+    {DATA.work.slice(0, 4).map((work, id) => (
+      <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
+        <div className={`relative ${id === 3 ? 'gradient-fade' : ''}`}>
+          <ResumeCard
+            key={work.company}
+            logoUrl={work.logoUrl}
+            altText={work.company}
+            title={work.company}
+            subtitle={work.title}
+            href={work.href}
+            badges={work.badges}
+            period={work.start}
+            description={work.description}
+          />
         </div>
-      </section>
+      </BlurFade>
+    ))}
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
+
+    <div className="flex justify-end items-center">
+      <a href="/conferences" className="text-sm font-medium text-gray-600 hover:text-gray-900">
+        View All
+      </a>
+      <span className="ml-1 text-sm text-gray-600">↗</span>
+    </div>
+    </BlurFade>
+  </div>
+</section>
 
       <section id="projects">
         <div className="space-y-4 w-full py-4">
