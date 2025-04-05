@@ -1,7 +1,6 @@
 "use client";
 import BlurFade from "@/components/magicui/blur-fade";
-import { FaLinkedin, FaGoogle, FaInstagram, FaGithub, FaYoutube } from "react-icons/fa";
-
+import Footer from "@/components/footer";
 // export const metadata = {
 //   title: "publications",
 //   description: "All of LARA Lab's publications since 2020",
@@ -9,174 +8,113 @@ import { FaLinkedin, FaGoogle, FaInstagram, FaGithub, FaYoutube } from "react-ic
 
 const BLUR_FADE_DELAY = 0.04;
 
-export default function Publication() {
+export default function Contact() {
   return (
-    <section className="max-w-6xl mx-auto p-2">
-      <h1 className="font-medium text-4xl mb-2 tracking-tighter">Contact us</h1>
-      <p>We&apos;d love to talk about how we can help you.</p>
+    <main className="flex flex-col">
+      <section className="px-6 md:px-10 pt-20">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="flex-1">
+              <h1 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">
+                Contact us
+              </h1>
+              <p className="text-lg text-gray-600">
+                We're excited to collaborate with researchers and industry partners
+                to advance the future of AI and robotics.
+              </p>
+            </div>
+            <div className="w-full md:w-1/3 aspect-[4/3]">
+              <img 
+                src="https://images.ctfassets.net/kftzwdyauwt9/32cmTSUIF5POX5FMuoHJwO/be8b42b8016957ca28e07274f05f1d3d/stangel-2022-0527.webp"
+                alt="LARA Lab environment" 
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+     
 
-      <BlurFade delay={BLUR_FADE_DELAY}>
-        <div className="mt-12 mb-12 gap-6 lg:gap-16">
-          <div className="flex flex-col border rounded-xl p-4 sm:pl-6 lg:p-8 dark:border-neutral-700">
-            <div className="divide-y divide-gray-200 dark:divide-neutral-800">
-              {/* Knowledgebase */}
-              <div className="flex gap-x-7 pb-6">
-                <svg
-                  className="shrink-0 size-6 mt-1.5  dark:text-neutral-200"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-                  <path d="M12 17h.01" />
-                </svg>
-                <div className="grow">
-                  <h3 className="font-semibold  dark:text-neutral-200">Knowledgebase</h3>
-                  <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                    We&apos;re here to help with any questions or code.
-                  </p>
-                  <a
-                    className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium hover:text-gray-800 focus:outline-none focus:text-gray-800  dark:hover:text-neutral-200 dark:focus:text-neutral-200"
-                    href="#"
-                  >
-                    Contact support
-                  </a>
-                </div>
-              </div>
-
-              {/* Connect with us on socials */}
-              <div className="flex gap-x-7 py-6">
-                <svg
-                  className="shrink-0 size-6 mt-1.5 dark:text-neutral-200"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z" />
-                  <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
-                </svg>
-                <div className="grow">
-                  <h3 className="font-semibold text-gray-800 dark:text-neutral-200">
-                    Connect with us on our socials
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                    Follow us on our social media platforms to stay updated with the latest news and research from LARA Lab.
-                  </p>
-                  <div className="mt-4 flex space-x-4">
-                    <a
-                      href="https://linkedin.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
-                    >
-                      <FaLinkedin size={20} />
+      {/* Contact Content */}
+      <section className="px-6 md:px-10 pt-20">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16">
+            {/* Left Column: Contact Info */}
+            <div className="space-y-12">
+              <div>
+                <h2 className="text-sm font-medium mb-8 uppercase tracking-wider text-gray-500">
+                  Contact Information
+                </h2>
+                
+                <div className="space-y-8">
+                  <div>
+                    <h3 className="text-base font-medium mb-2">Email</h3>
+                    <a href="mailto:isoltani@ucdavis.edu" 
+                       className="text-gray-600 hover:text-black transition-colors">
+                      isoltani@ucdavis.edu
                     </a>
-                    <a
-                      href="https://scholar.google.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
-                    >
-                      <FaGoogle size={20} />
-                    </a>
-                    <a
-                      href="https://youtube.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
-                    >
-                      <FaYoutube size={20} />
-                    </a>
-                    <a
-                      href="https://instagram.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
-                    >
-                      <FaInstagram size={20} />
-                    </a>
-                    <a
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-gray-800 dark:text-neutral-400 dark:hover:text-neutral-200"
-                    >
-                      <FaGithub size={20} />
-                    </a>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-base font-medium mb-2">Location</h3>
+                    <p className="text-gray-600">
+                      Mechanical & Aerospace Engineering<br />
+                      One Shields Avenue<br />
+                      Davis, CA 95616
+                    </p>
                   </div>
                 </div>
               </div>
 
+              <div className="rounded-lg border border-gray-100 p-4">
+                <p className="text-sm text-gray-500">
+                  Our lab is located in the Mechanical & Aerospace Engineering building
+                  at UC Davis main campus.
+                </p>
+              </div>
+            </div>
 
-        <div className=" flex gap-x-7 py-6">
-          <svg className="shrink-0 size-6 mt-1.5  dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 11 2-2-2-2"/><path d="M11 13h4"/><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/></svg>
-          <div className="grow">
-            <h3 className="font-semibold text-gray-800 dark:text-neutral-200">We Recruit</h3>
-            <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">We’re seeking motivated graduate students. Interested? Send your CV to isoltani@ucdavis.edu with ‘Open PhD/Masters Position’ in the subject line.
-            </p>
-            <a className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium hover:text-gray-800 focus:outline-none focus:text-gray-800  dark:hover:text-neutral-200 dark:focus:text-neutral-200" href="mailto:isoltani@ucdavis.edu">
-              Send CV
-              <svg className="shrink-0 size-2.5 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.975821 6.92249C0.43689 6.92249 -3.50468e-07 7.34222 -3.27835e-07 7.85999C-3.05203e-07 8.37775 0.43689 8.79749 0.975821 8.79749L12.7694 8.79748L7.60447 13.7596C7.22339 14.1257 7.22339 14.7193 7.60447 15.0854C7.98555 15.4515 8.60341 15.4515 8.98449 15.0854L15.6427 8.68862C16.1191 8.23098 16.1191 7.48899 15.6427 7.03134L8.98449 0.634573C8.60341 0.268455 7.98555 0.268456 7.60447 0.634573C7.22339 1.00069 7.22339 1.59428 7.60447 1.9604L12.7694 6.92248L0.975821 6.92249Z" fill="currentColor"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-              {/* Contact via email */}
-              <div className="flex gap-x-7 pt-6">
-                <svg
-                  className="shrink-0 size-6 mt-1.5  dark:text-neutral-200"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z" />
-                  <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
-                </svg>
-                <div className="grow">
-                  <h3 className="font-semibold text-gray-800 dark:text-neutral-200">Contact us by email</h3>
-                  <p className="mt-1 text-sm text-gray-500 dark:text-neutral-500">
-                    If you wish to write us an email instead, please use
+            {/* Right Column: Join Lab */}
+            <div className="space-y-12">
+              <div>
+                <h2 className="text-sm font-medium mb-8 uppercase tracking-wider text-gray-500">
+                  Join Our Lab
+                </h2>
+                
+                <div className="space-y-8">
+                  <p className="text-gray-600">
+                    We're looking for motivated graduate students with experience in:
                   </p>
-                  <a
-                    className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium hover:text-gray-800 focus:outline-none focus:text-gray-800 dark:hover:text-neutral-200 dark:focus:text-neutral-200"
-                    href="mailto:isoltani@ucdavis.edu"
-                  >
-                    isoltani@ucdavis.edu
-                  </a>
+                  
+                  <div className="space-y-4">
+                    {['Machine Learning & AI', 'Robotics (ROS)', 'Computer Vision & Optics'].map((skill) => (
+                      <div key={skill} className="flex items-center gap-3">
+                        <div className="w-1 h-1 bg-black rounded-full" />
+                        <p>{skill}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
+              </div>
+
+              {/* Application CTA */}
+              <div className="rounded-lg border border-gray-100 p-6 space-y-4">
+                <h3 className="font-medium">Ready to apply?</h3>
+                <p className="text-sm text-gray-600">
+                  Send your CV and cover letter with the subject "Open PhD/Masters Position"
+                </p>
+                <a 
+                  href="mailto:isoltani@ucdavis.edu?subject=Open%20PhD/Masters%20Position" 
+                  className="inline-flex items-center text-sm bg-black text-white px-6 py-2.5 rounded-full hover:bg-gray-900 transition-all"
+                >
+                  Apply Now →
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </BlurFade>
-      <hr className="border-gray-200 mb-6 dark:border-neutral-800" />
-      <BlurFade delay={BLUR_FADE_DELAY * 30}>
-            <p className="text-xs mb-20 tracking-tighter border-gray-200 dark:border-neutral-800">
-              Crafted with ❤️ by <a href="https://mohnishgopi.com/" target="_blank" className="text-blue-500 hover:underline">Mohnish Gopi</a>
-            </p>
-          </BlurFade>
-    
-    </section>
+        <Footer />
+      </section>
+    </main>
   );
 }

@@ -1,16 +1,11 @@
-import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
-import { cn } from "@/lib/utils";
+import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import Sidebar from "@/components/sidebar";
 import "./globals.css";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -54,21 +49,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-4 sm:py-10 px-6",
-          fontSans.variable
-        )}
-      >
+    <html lang="en" suppressHydrationWarning className={GeistSans.className}>
+      <body className="antialiased bg-gray-50">
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
-            {children}
-            <Navbar />
+            <div className="min-h-screen p-3">
+              <div className="fixed inset-3 flex rounded-xl bg-white shadow-sm">
+                <Sidebar />
+                <main className="flex-1 overflow-auto">
+                  <div className="w-full">
+                    {children}
+                  </div>
+                </main>
+              </div>
+            </div>
           </TooltipProvider>
         </ThemeProvider>
       </body>
-      
     </html>
   );
 }
