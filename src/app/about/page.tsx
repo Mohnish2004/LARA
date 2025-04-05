@@ -76,7 +76,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl md:text-2xl font-medium mb-4">Our Mission</h2>
           <p className="text-[15px] leading-relaxed text-gray-600">
-            The Laboratory for AI, Robotics, and Automation (LARA) at UC Davis is dedicated to advancing the frontiers of artificial intelligence and robotics. We're building autonomous systems that can learn, adapt, and operate in complex environments, with applications that range from industrial automation to healthcare diagnostics.
+            The Laboratory for AI, Robotics, and Automation (LARA) at UC Davis is dedicated to advancing the frontiers of artificial intelligence and robotics. We&apos;re building autonomous systems that can learn, adapt, and operate in complex environments, with applications that range from industrial automation to healthcare diagnostics.
           </p>
         </div>
       </section>
@@ -128,7 +128,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl md:text-2xl font-medium mb-4">Our History</h2>
           <p className="text-[15px] text-gray-600 mb-6 leading-relaxed">
-            Founded at UC Davis, LARA Lab has been at the forefront of AI and robotics research, establishing itself as a leader in autonomous systems development. Our journey has been marked by groundbreaking publications, successful industry collaborations, and the development of innovative technologies that push the boundaries of what's possible.
+            Founded at UC Davis, LARA Lab has been at the forefront of AI and robotics research, establishing itself as a leader in autonomous systems development. Our journey has been marked by groundbreaking publications, successful industry collaborations, and the development of innovative technologies that push the boundaries of what&apos;s possible.
           </p>
           <div className="space-y-6 mt-8">
             <div className="flex">
