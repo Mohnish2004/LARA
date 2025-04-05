@@ -19,7 +19,7 @@ export default function Contact() {
                 Contact us
               </h1>
               <p className="text-lg text-gray-600">
-                We're excited to collaborate with researchers and industry partners
+                We&apos;re excited to collaborate with researchers and industry partners
                 to advance the future of AI and robotics.
               </p>
             </div>
@@ -83,7 +83,7 @@ export default function Contact() {
                 
                 <div className="space-y-8">
                   <p className="text-gray-600">
-                    We're looking for motivated graduate students with experience in:
+                    We&apos;re looking for motivated graduate students with experience in:
                   </p>
                   
                   <div className="space-y-4">
@@ -101,7 +101,7 @@ export default function Contact() {
               <div className="rounded-lg border border-gray-100 p-6 space-y-4">
                 <h3 className="font-medium">Ready to apply?</h3>
                 <p className="text-sm text-gray-600">
-                  Send your CV and cover letter with the subject "Open PhD/Masters Position"
+                  Send your CV and cover letter with the subject &quot;Open PhD/Masters Position&quot;
                 </p>
                 <a 
                   href="mailto:isoltani@ucdavis.edu?subject=Open%20PhD/Masters%20Position" 
