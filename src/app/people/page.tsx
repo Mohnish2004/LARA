@@ -1,11 +1,9 @@
+"use client";
+
 import BlurFade from "@/components/magicui/blur-fade";
 import Link from "next/link";
 import { DATA } from "@/data/resume";
-export const metadata = {
-  title: "People",
-  description:
-    "A community of software engineers, designers, and creatives sharing their experiences, tips, and inspiration.",
-};
+import Footer from "@/components/footer";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -14,6 +12,7 @@ const people = {
   director: [
     {
       name: "Iman Soltani, PhD",
+      title: "Director, LARA Lab",
       major: "Mechanical and Aerospace Engineering (MAE), Electrical and Computer Engineering (ECE), Computer Science (CS)",
       image: "/pics/iman_soltani.jpg"
     }
@@ -96,71 +95,156 @@ const people = {
 
 export default function People() {
   return (
-    <section className="max-w-6xl mx-auto p-2 mb-16 ">
-      <h1 className="font-medium text-4xl mb-8 tracking-tighter">Our Team</h1>
-      <BlurFade delay={BLUR_FADE_DELAY}>
-        <div className="flex-col flex flex-1 space-y-1.5">
+    <main className="flex flex-col">
+      {/* Hero Section */}
+      <section className="pt-20 pb-12 px-6 md:px-10 text-center">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-sm text-gray-600 mb-4">Laboratory</p>
+          <h1 className="text-[64px] font-medium tracking-tight mb-6 leading-none">
+            Meet our team
+          </h1>
+          <p className="text-[15px] text-gray-600 mb-15 leading-relaxed max-w-2xl mx-auto">
+            A diverse group of researchers and students working together to advance<br />
+            the frontiers of AI, robotics, and automation at UC Davis.
+          </p>
+        </div>
+      </section>
+
+      {/* Group Photo */}
+      <section className="px-6 md:px-10 pb-20">
+        <div className="w-full max-w-5xl mx-auto">
           <img 
-            src="./gro.jpeg" 
-            alt="" 
-            draggable="false" 
-            className="rounded-lg w-full h-full mb-6 object-cover" 
+            src="/group.jpeg"
+            alt="LARA Lab research team" 
+            className="w-full h-[500px] rounded-md object-cover object-top"
           />
         </div>
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <p className="prose max-w-full bg-gray-100 dark:bg-none dark:text-gray-900 rounded-lg p-4 text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            LARA Lab was founded by Dr. Iman Soltani at UC Davis to advance AI, robotics, and automation. What started as a small initiative grew into a hub for cutting-edge research in autonomous systems, industrial automation, and healthcare technologies. Today, the lab collaborates with industry and academia, pushing the boundaries of intelligent technology.
-          </p>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <div className="bg-black bg-gray-100 rounded-lg p-4 p-8 mt-4 mb-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div>
-                <h3 className="text-2xl font-bold text-black">60+</h3>
-                <p className="text-gray-500 dark:text-gray-400">Members</p>
+      </section>
+      
+      <div className="px-6 md:px-10">
+        <div className="max-w-4xl mx-auto">
+          {/* Director Section */}
+          <section className="py-16">
+            <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Director</h2>
+            <div className="flex flex-col md:flex-row gap-12">
+              <div className="md:w-1/4">
+                <img 
+                  src={people.director[0].image}
+                  alt={people.director[0].name}
+                  className="w-full aspect-square object-cover rounded-lg"
+                />
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-black">15+</h3>
-                <p className="text-gray-500 dark:text-gray-400">Projects</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-black">10</h3>
-                <p className="text-gray-500 dark:text-gray-400">Conferences</p>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-black">100$</h3>
-                <p className="text-gray-500 dark:text-gray-400">Budget</p>
+              <div className="md:w-3/4">
+                <h3 className="text-[24px] font-medium mb-3">{people.director[0].name}</h3>
+                <p className="text-[15px] text-gray-600 mb-4">{people.director[0].title}</p>
+                <p className="text-[15px] text-gray-600 mb-6">{people.director[0].major}</p>
+                <Link 
+                  href="/about"
+                  className="text-[14px] bg-black text-white px-4 py-1.5 rounded-full hover:bg-gray-800 transition-colors"
+                >
+                  Learn More →
+                </Link>
               </div>
             </div>
-          </div>
+          </section>
 
-          </BlurFade>
-          </BlurFade>
+          {/* Post-doctoral Fellows */}
+          <section className="py-16 border-t border-gray-100">
+            <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Post-doctoral Fellows</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
+              {people.postdoctoralFellows.map((person) => (
+                <div key={person.name} className="flex gap-4 items-start">
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                  <div>
+                    <h3 className="text-[15px] font-medium">{person.name}</h3>
+                    <p className="text-[13px] text-gray-600 mt-1">{person.major}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
-      {Object.entries(people).map(([category, members]) => (
-        <div key={category} className="mt-12">
-          <h2 className="text-2xl font-bold mb-6 capitalize">{category.replace(/([A-Z])/g, ' $1').trim()}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {members.map((person, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <img
-                  src={person.image}
-                  alt={person.name}
-                  className="w-full aspect-square object-cover rounded-lg mb-3"
-                />
-                <h3 className="font-medium text-lg">{person.name}</h3>
-                <p className="text-xs text-gray-400 text-center">{person.major}</p>
-              </div>
-            ))}
-          </div>
+          {/* PhD Students */}
+          <section className="py-16 border-t border-gray-100">
+            <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">PhD Students</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
+              {people.phdStudents.map((person) => (
+                <div key={person.name} className="flex gap-4 items-start">
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                  <div>
+                    <h3 className="text-[15px] font-medium">{person.name}</h3>
+                    <p className="text-[13px] text-gray-600 mt-1">{person.major}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Masters Students */}
+          <section className="py-16 border-t border-gray-100">
+            <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Masters Students</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
+              {people.mastersStudents.map((person) => (
+                <div key={person.name} className="flex gap-4 items-start">
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                  <div>
+                    <h3 className="text-[15px] font-medium">{person.name}</h3>
+                    <p className="text-[13px] text-gray-600 mt-1">{person.major}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Undergraduate Researchers */}
+          <section className="py-16 border-t border-gray-100">
+            <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Undergraduate Researchers</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
+              {people.undergraduateResearchers.map((person) => (
+                <div key={person.name} className="flex gap-4 items-start">
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                  <div>
+                    <h3 className="text-[15px] font-medium">{person.name}</h3>
+                    <p className="text-[13px] text-gray-600 mt-1">{person.major}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Alumni */}
+          <section className="py-16 border-t border-gray-100">
+            <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Alumni</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-6">
+              {people.alumni.map((person) => (
+                <div key={person.name}>
+                  <h3 className="text-[15px] font-medium">{person.name}</h3>
+                  <p className="text-[13px] text-gray-600 mt-1">{person.major}</p>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
-      ))}
-              <hr className="border-gray-200 mb-6 dark:border-neutral-800" />
-              <BlurFade delay={BLUR_FADE_DELAY * 30}>
-            <p className="text-xs mb-20 tracking-tighter border-gray-200 dark:border-neutral-800">
-              Crafted with ❤️ by <a href="https://mohnishgopi.com/" target="_blank" className="text-blue-500 hover:underline">Mohnish Gopi</a>
-            </p>
-          </BlurFade>
-    </section>
+        <Footer />
+
+      </div>
+
+    </main>
   );
 }

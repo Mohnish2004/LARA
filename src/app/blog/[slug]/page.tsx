@@ -4,6 +4,7 @@ import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
@@ -51,7 +52,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function Blog({
+export default async function BlogPost({
   params,
 }: {
   params: {
@@ -65,7 +66,7 @@ export default async function Blog({
   }
 
   return (
-    <section id="blog">
+    <section className="max-w-4xl mx-auto px-6">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -88,20 +89,101 @@ export default async function Blog({
           }),
         }}
       />
-      <h1 className="title font-medium text-2xl tracking-tighter max-w-[650px]">
-        {post.metadata.title}
-      </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm max-w-[650px]">
-        <Suspense fallback={<p className="h-5" />}>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            {formatDate(post.metadata.publishedAt)}
-          </p>
-        </Suspense>
+      
+      {/* Back to blog link */}
+      <div className="py-6">
+        <Link href="/blog" className="inline-flex items-center text-[15px] text-gray-600 hover:text-gray-900">
+          <svg className="mr-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to all posts
+        </Link>
       </div>
-      <article
-        className="prose dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: post.source }}
-      ></article>
+      
+      {/* Post header */}
+      <div className="pt-8 pb-10 max-w-3xl mx-auto text-center">
+        <div className="mb-3 flex items-center justify-center">
+          <span className="text-sm text-gray-500">
+            {formatDate(post.metadata.publishedAt)}
+          </span>
+          {post.metadata.category && (
+            <>
+              <span className="mx-2">·</span>
+              <span className="text-sm text-gray-500">{post.metadata.category}</span>
+            </>
+          )}
+        </div>
+        
+        <h1 className="text-4xl md:text-5xl font-medium tracking-tight mb-6">
+          {post.metadata.title}
+        </h1>
+        
+        <p className="text-[17px] text-gray-600 max-w-2xl mx-auto">
+          {post.metadata.summary}
+        </p>
+      </div>
+      
+      {/* Featured image */}
+      {post.metadata.image && (
+        <div className="mb-12">
+          <img 
+            src={post.metadata.image}
+            alt={post.metadata.title}
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
+      )}
+      
+      {/* If no image is specified, use the default OpenAI style image */}
+      {!post.metadata.image && (
+        <div className="mb-12">
+          <img 
+            src="https://images.ctfassets.net/kftzwdyauwt9/32cmTSUIF5POX5FMuoHJwO/be8b42b8016957ca28e07274f05f1d3d/stangel-2022-0527.webp?w=3840&q=90&fm=webp"
+            alt={post.metadata.title}
+            className="w-full h-auto rounded-lg"
+          />
+        </div>
+      )}
+      
+      {/* Post content */}
+      <article className="max-w-3xl mx-auto">
+        <div
+          className="prose prose-gray max-w-none text-[15px]"
+          dangerouslySetInnerHTML={{ __html: post.source }}
+        ></div>
+      </article>
+      
+      {/* Authors section */}
+      <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-gray-100">
+        <h2 className="text-xl font-medium mb-4">Authors</h2>
+        <div className="flex items-center">
+          <div className="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+          <div>
+            <h3 className="text-base font-medium">LARA Lab</h3>
+            <p className="text-[15px] text-gray-600">
+              The Laboratory for AI, Robotics, and Automation at UC Davis
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      {/* Related posts (placeholder - would need to implement logic) */}
+      <div className="max-w-3xl mx-auto mt-16 pt-8 border-t border-gray-100">
+        <h2 className="text-xl font-medium mb-6">Related Research</h2>
+        <div className="space-y-4">
+          {/* You can implement related posts logic here */}
+          <p className="text-[15px] text-gray-600">
+            Explore more research from our lab
+          </p>
+        </div>
+      </div>
+      
+      {/* Footer */}
+      <footer className="max-w-3xl mx-auto mt-16 pt-8 pb-16 border-t border-gray-100 text-sm text-gray-600">
+        <p>University of California, Davis</p>
+        <p>One Shields Avenue, Davis, CA 95616</p>
+        <p className="mt-4">© The Regents of the University of California, Davis campus.</p>
+      </footer>
     </section>
   );
 }
