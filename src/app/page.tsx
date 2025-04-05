@@ -233,7 +233,7 @@ export default function Page() {
                   Join Our Research Community
                 </h2>
                 <p className="text-gray-600 text-lg mx-auto max-w-xl">
-                  We're looking for talented researchers, industry partners, and students to collaborate on cutting-edge projects.
+                  We&apos;re looking for talented researchers, industry partners, and students to collaborate on cutting-edge projects.
                 </p>
               </div>
               
