@@ -241,8 +241,9 @@ export default function People() {
             </div>
           </section>
         </div>
+        <Footer />
+
       </div>
-      <Footer />
 
     </main>
   );
