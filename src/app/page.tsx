@@ -99,6 +99,43 @@ const recentNews = [
   }
 ];
 
+// Get the latest publications for featured section
+const featuredPublications = [
+  {
+    title: "InterACT: Inter-dependency Aware Action Chunking with Hierarchical Attention Transformers for Bimanual Manipulation",
+    description: "A novel approach to bimanual manipulation using hierarchical attention transformers, focusing on understanding and modeling inter-dependencies between actions.",
+    href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:YFjsv_pBGBYC",
+    type: "Research",
+    preview: {
+      type: "video",
+      url: "/videos/interact-preview.mp4",
+      thumbnail: "/publications/thumbnails/interact-thumb.jpg"
+    }
+  },
+  {
+    title: "Cardreamer: Open-source learning platform for world model based autonomous driving",
+    description: "An open-source platform designed for developing and testing world model based autonomous driving systems.",
+    href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:GnPB-g6toBAC",
+    type: "Platform",
+    preview: {
+      type: "image",
+      url: "/publications/cardreamer-demo.jpg",
+      thumbnail: "/publications/thumbnails/cardreamer-thumb.jpg"
+    }
+  },
+  {
+    title: "MarineFormer: A Transformer-based Navigation Policy Model for Collision Avoidance in Marine Environment",
+    description: "Advanced navigation system utilizing transformer architecture for marine vessel collision avoidance.",
+    href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:lSLTfruPkqcC",
+    type: "Research",
+    preview: {
+      type: "video",
+      url: "/videos/marineformer-demo.mp4",
+      thumbnail: "/publications/thumbnails/marineformer-thumb.jpg"
+    }
+  }
+];
+
 export default function Page() {
   // Get the first 3 projects for a cleaner layout
   const featuredProjects = DATA.projects.slice(0, 3);
@@ -153,40 +190,67 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Featured Projects - Clean card layout */}
+      {/* Featured Projects - Updated with media support */}
       <section className="px-6 md:px-10 py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-between items-center mb-16">
             <h2 className="text-sm font-medium uppercase tracking-wider text-gray-500">Latest Research</h2>
-            <Link href="/projects" className="text-sm font-medium hover:text-gray-600 transition-colors">
-              View all projects →
+            <Link href="/publications" className="text-sm font-medium hover:text-gray-600 transition-colors">
+              View all publications →
             </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {featuredProjects.map((project) => (
-              <Link key={project.title} href={project.href} className="group">
+            {featuredPublications.map((pub) => (
+              <Link 
+                key={pub.title} 
+                href={pub.href}
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="group"
+              >
                 <div className="space-y-6">
-                  <div className="aspect-square overflow-hidden rounded-lg">
-                    <img 
-                      src={project.image || "/test.png"} 
-                      alt={project.title}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-2 group-hover:text-gray-600 transition-colors">
-                      {project.title}
-                    </h3>
-                    {project.links && (
-                      <div className="flex gap-4">
-                        {project.links.map((link, idx) => (
-                          <span key={idx} className="text-sm text-gray-500">
-                            {link.type}
-                          </span>
-                        ))}
+                  <div className="aspect-video relative overflow-hidden rounded-lg bg-gray-100">
+                    {pub.preview.type === 'video' ? (
+                      <div className="relative">
+                        <video
+                          className="w-full h-full object-cover"
+                          poster={pub.preview.thumbnail}
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                        >
+                          <source src={pub.preview.url} type="video/mp4" />
+                        </video>
+                        {/* Play button overlay */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center group-hover:bg-opacity-75 transition-all">
+                            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
+                    ) : (
+                      <img 
+                        src={pub.preview.url}
+                        alt={pub.title}
+                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                      />
                     )}
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-lg font-medium mb-2 group-hover:text-blue-600 transition-colors">
+                      {pub.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                      {pub.description}
+                    </p>
+                    <span className="text-sm text-gray-500 font-medium">
+                      {pub.type}
+                    </span>
                   </div>
                 </div>
               </Link>

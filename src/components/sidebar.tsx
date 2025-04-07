@@ -10,10 +10,10 @@ import { useState, useEffect } from "react";
 const sidebarLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "People", href: "/people" },
   { name: "Publications", href: "/publications" },
   { name: "News", href: "/blog" },
-  { name: "Gallery", href: "/gallery" },
+  // { name: "Gallery", href: "/gallery" },
+  { name: "People", href: "/people" },
   { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ];
