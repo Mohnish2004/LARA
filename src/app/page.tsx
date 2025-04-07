@@ -102,36 +102,36 @@ const recentNews = [
 // Get the latest publications for featured section
 const featuredPublications = [
   {
-    title: "InterACT: Inter-dependency Aware Action Chunking with Hierarchical Attention Transformers for Bimanual Manipulation",
-    description: "A novel approach to bimanual manipulation using hierarchical attention transformers, focusing on understanding and modeling inter-dependencies between actions.",
+    title: "Active vision might be all you need: Exploring active vision in bimanual robotic manipulation",
+    description: "Novel approach to robotic manipulation using active vision systems for improved performance and adaptability.",
+    href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:O3NaXMp0MMsC",
+    type: "Research",
+    preview: {
+      type: "image",
+      url: "/publications/av-aloha.gif",
+      thumbnail: "/publications/av-aloha.gif"
+    }
+  },
+  {
+    title: "Hierarchical end-to-end autonomous navigation through few-shot waypoint detection",
+    description: "Advanced autonomous navigation system using hierarchical learning and waypoint detection.",
+    href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:JV2RwH3_ST0C",
+    type: "Research",
+    preview: {
+      type: "video",
+      url: "/publications/demo_autodrive.mp4",
+      thumbnail: "/publications/demo_autodrive.mp4"
+    }
+  },
+  {
+    title: "InterACT: Inter-dependency Aware Action Chunking with Hierarchical Attention Transformers",
+    description: "Novel framework for bimanual manipulation using hierarchical attention transformers.",
     href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:YFjsv_pBGBYC",
     type: "Research",
     preview: {
       type: "video",
-      url: "/videos/interact-preview.mp4",
-      thumbnail: "/publications/thumbnails/interact-thumb.jpg"
-    }
-  },
-  {
-    title: "Cardreamer: Open-source learning platform for world model based autonomous driving",
-    description: "An open-source platform designed for developing and testing world model based autonomous driving systems.",
-    href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:GnPB-g6toBAC",
-    type: "Platform",
-    preview: {
-      type: "image",
-      url: "/publications/cardreamer-demo.jpg",
-      thumbnail: "/publications/thumbnails/cardreamer-thumb.jpg"
-    }
-  },
-  {
-    title: "MarineFormer: A Transformer-based Navigation Policy Model for Collision Avoidance in Marine Environment",
-    description: "Advanced navigation system utilizing transformer architecture for marine vessel collision avoidance.",
-    href: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:lSLTfruPkqcC",
-    type: "Research",
-    preview: {
-      type: "video",
-      url: "/videos/marineformer-demo.mp4",
-      thumbnail: "/publications/thumbnails/marineformer-thumb.jpg"
+      url: "/publications/InteractDemo.mp4",
+      thumbnail: "/publications/InteractDemo.mp4"
     }
   }
 ];
@@ -220,17 +220,10 @@ export default function Page() {
                           muted
                           loop
                           playsInline
+                          preload="auto"
                         >
                           <source src={pub.preview.url} type="video/mp4" />
                         </video>
-                        {/* Play button overlay */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-12 h-12 bg-black bg-opacity-50 rounded-full flex items-center justify-center group-hover:bg-opacity-75 transition-all">
-                            <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                            </svg>
-                          </div>
-                        </div>
                       </div>
                     ) : (
                       <img 

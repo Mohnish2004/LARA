@@ -72,7 +72,11 @@ const publications: Publication[] = [
     venue: "arXiv preprint",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:O3NaXMp0MMsC",
     citations: 5,
-    type: "preprint"
+    type: "preprint",
+    media: {
+      type: "image",
+      url: "/publications/av-aloha.gif"
+    }
   },
   {
     title: "InterACT: Inter-dependency Aware Action Chunking with Hierarchical Attention Transformers for Bimanual Manipulation",
@@ -81,7 +85,12 @@ const publications: Publication[] = [
     venue: "arXiv preprint",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:YFjsv_pBGBYC",
     citations: 5,
-    type: "preprint"
+    type: "preprint",
+    media: {
+      type: "video",
+      url: "/publications/InteractDemo.mp4",
+      thumbnail: "/publications/InteractDemo.mp4"
+    }
   },
   {
     title: "Performance of Automated Machine Learning in Predicting Outcomes of Pneumatic Retinopexy",
@@ -108,7 +117,11 @@ const publications: Publication[] = [
     venue: "IEEE Robotics and Automation Letters 9 (4), 3211-3218",
     link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:JV2RwH3_ST0C",
     citations: 2,
-    type: "journal"
+    type: "journal",
+    media: {
+      type: "video",
+      url: "/publications/demo_autodrive.mp4"
+    }
   },
   {
     title: "Vehicle neural network enhancement",
@@ -265,7 +278,7 @@ export default function Publications() {
           <h1 className="text-[64px] font-medium tracking-tight mb-6 leading-none">
             Publications
           </h1>
-        </div>
+      </div>
       </section>
 
       <div className="px-6 md:px-10">
@@ -299,7 +312,11 @@ export default function Publications() {
                       <video
                         className="w-full h-full object-cover"
                         poster={pub.media.thumbnail}
-                        controls
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
                       >
                         <source src={pub.media.url} type="video/mp4" />
                       </video>
