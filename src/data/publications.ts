@@ -36,11 +36,11 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "arXiv preprint",
       link: "https://arxiv.org/abs/2504.06379",
       type: "preprint",
-      media: {
-        type: "video",
-        url: "/publications/user.mp4",
-        thumbnail: "/publications/user.mp4"
-      }
+      // media: {
+      //   type: "video",
+      //   url: "/publications/user.mp4",
+      //   thumbnail: "/publications/user.mp4"
+      // }
     },
     {
       title: "Infrared Vision Systems for Emergency Vehicle Driver Assistance in Low-Visibility Conditions",
@@ -199,7 +199,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "arXiv preprint",
       link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:BqipwSGYUEgC",
       citations: 1,
-      type: "preprint"
+      type: "preprint",
+      media: {
+        type: "video",
+        url: "/publications/videoplayback.mp4",
+        thumbnail: "/publications/videoplayback.mp4"
+      }
     },
     {
       title: "Anomaly detection with domain adaptation",

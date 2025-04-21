@@ -19,15 +19,15 @@ const people = {
   ],
   postdoctoralFellows: [
     { name: "Amin Ghafourian", major: "Mechanical and Aerospace Engineering", image: "/pics/AminGhafourianMomenzadeh.jpeg" },
-    { name: "Ehsan Kazemi", major: "Mechanical and Aerospace Engineering", image: "/sam.jpg" }
+    { name: "Mahdi Naddaf", major: "Mechanical and Aerospace Engineering", image: "/pics/mahdi.png" }
   ],
   phdStudents: [
     { name: "Ziba Fazel", major: "Mechanical and Aerospace Engineering", image: "/pics/ZibaFazel.jpg" },
     { name: "Kai Fukazawa", major: "Mechanical and Aerospace Engineering (MAE)", image: "/pics/KaiFukazawa.jpg" },
-    { name: "Dechen Gao", major: "Computer Science", image: "/sam.jpg" },
+    { name: "Dechen Gao", major: "Computer Science", image: "/pics/Dechen.png" },
     { name: "Andrew Lee", major: "Computer Science", image: "/pics/andrewlee.png" },
     { name: "Caton Mande", major: "Mechanical and Aerospace Engineering", image: "/pics/CatonMande.jpg" },
-    { name: "Ricardo Tapia", major: "Mechanical and Aerospace Engineering", image: "/sam.jpg" },
+    { name: "Ricardo Tapia", major: "Mechanical and Aerospace Engineering", image: "/pics/Ricardo.png" },
     { name: "Arefeh Yavari", major: "Computer Science", image: "/pics/ArefehYavari.png" }
   ],
   mastersStudents: [
@@ -35,7 +35,6 @@ const people = {
     { name: "Hemachandran Balaji", major: "Computer Science", image: "/pics/HemachandranBalaji.png" },
     { name: "Ling-Yuan Chen", major: "Mechanical and Aerospace Engineering", image: "/pics/Ling-YuanChen.jpeg" },
     { name: "Soumyajit Ganguly", major: "Mechanical and Aerospace Engineering", image: "/pics/SoumyajitGanguly.jpg" },
-    { name: "Kaleb Kokott", major: "Mechanical and Aerospace Engineering", image: "/sam.jpg" },
     { name: "Hrushikesh Mathi", major: "Mechanical and Aerospace Engineering", image: "/pics/HrushikeshMathi.jpg" },
     { name: "Kunal Mundada", major: "Computer Science", image: "/pics/KunalMundada.jpeg" },
     { name: "Mohd Shais Khan", major: "Mechanical and Aerospace Engineering", image: "/pics/MohdShaisKhan.jpg" }
@@ -59,6 +58,7 @@ const people = {
     { name: "Vamsi Chilamkur", major: "Davis Senior High", image: "/pics/VamsiChilamkur.jpg" }
   ],
   alumni: [
+    { name: "Ehsan Kazemi", major: "Mechanical and Aerospace Engineering", image: "/sam.jpg" },
     { name: "Mehita Achuthan", major: "Computer Science", image: "/pics/MehitaAchuthan.jpg" },
     { name: "Al Arsh Basheer", major: "Mechanical and Aerospace Engineering", image: "/pics/AlArshBasheer.jpg" },
     { name: "Gautama Bharadwaj", major: "Electrical and Computer Engineering", image: "/pics/GautamaBharadwaj.jpg" },

@@ -34,10 +34,18 @@ export default function Publications() {
       <section className="pt-20 pb-16 px-6 md:px-10">
         <div className="max-w-5xl mx-auto">
           <p className="text-sm text-gray-600 mb-4">Research</p>
-          <h1 className="text-[64px] font-medium tracking-tight mb-6 leading-none">
-            Publications
-          </h1>
-      </div>
+          <div className="flex flex-col gap-2">
+            <h1 className="text-[64px] font-medium tracking-tight leading-none mb-2">
+              Publications
+            </h1>
+            <Link 
+              href="/patents" 
+              className="inline-flex items-center text-sm text-gray-600 hover:text-black transition-colors w-fit"
+            >
+              Looking for patents? View our patent portfolio →
+            </Link>
+          </div>
+        </div>
       </section>
 
       <div className="px-6 md:px-10">
