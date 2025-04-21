@@ -14,7 +14,7 @@ const people = {
       name: "Iman Soltani, PhD",
       title: "Director, LARA Lab",
       major: "Mechanical and Aerospace Engineering (MAE), Electrical and Computer Engineering (ECE), Computer Science (CS)",
-      image: "/pics/iman_soltani.jpg"
+      image: "/Portrait.jpg"
     }
   ],
   postdoctoralFellows: [

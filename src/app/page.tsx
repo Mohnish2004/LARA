@@ -10,6 +10,8 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import { ChevronRightIcon } from "lucide-react";
 import Footer from "@/components/footer";
+import { useState } from "react";
+import { ALL_PUBLICATIONS } from   "@/data/publications";
 
 // FAQ Data
 const faqs = [
@@ -140,6 +142,12 @@ export default function Page() {
   // Get the first 3 projects for a cleaner layout
   const featuredProjects = DATA.projects.slice(0, 3);
 
+  // Add state for expanded publications
+  const [showAllPublications, setShowAllPublications] = useState(false);
+  
+  // Get initial publications (first 3) or all based on state
+  const displayedPublications = showAllPublications ? ALL_PUBLICATIONS : ALL_PUBLICATIONS.slice(0, 3);
+
   return (
     <main className="flex flex-col">
       {/* Hero Section - Simplified and more impactful */}
@@ -190,7 +198,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Featured Projects - Updated with media support */}
+      {/* Featured Projects/Publications Section - Updated with expand functionality */}
       <section className="px-6 md:px-10 py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-between items-center mb-16">
@@ -201,36 +209,45 @@ export default function Page() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {featuredPublications.map((pub) => (
+            {displayedPublications.map((pub) => (
               <Link 
                 key={pub.title} 
-                href={pub.href}
+                href={pub.link || "#"}
                 target="_blank"
                 rel="noopener noreferrer" 
                 className="group"
               >
                 <div className="space-y-6">
                   <div className="aspect-video relative overflow-hidden rounded-lg bg-gray-100">
-                    {pub.preview.type === 'video' ? (
-                      <div className="relative">
-                        <video
-                          className="w-full h-full object-cover"
-                          poster={pub.preview.thumbnail}
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          preload="auto"
-                        >
-                          <source src={pub.preview.url} type="video/mp4" />
-                        </video>
-                      </div>
+                    {pub.media ? (
+                      pub.media.type === 'video' ? (
+                        <div className="relative">
+                          <video
+                            className="w-full h-full object-cover"
+                            poster={pub.media.thumbnail}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="auto"
+                          >
+                            <source src={pub.media.url} type="video/mp4" />
+                          </video>
+                        </div>
+                      ) : (
+                        <img 
+                          src={pub.media.url}
+                          alt={pub.title}
+                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                      )
                     ) : (
-                      <img 
-                        src={pub.preview.url}
-                        alt={pub.title}
-                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                      />
+                      // Default placeholder for publications without media
+                      <div className="w-full h-full flex items-center justify-center text-gray-400">
+                        <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
                     )}
                   </div>
                   
@@ -238,16 +255,31 @@ export default function Page() {
                     <h3 className="text-lg font-medium mb-2 group-hover:text-blue-600 transition-colors">
                       {pub.title}
                     </h3>
-                    <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                      {pub.description}
-                    </p>
-                    <span className="text-sm text-gray-500 font-medium">
-                      {pub.type}
-                    </span>
+                    <div className="text-sm text-gray-600 mb-2">
+                      {pub.authors.slice(0, 3).join(", ")}
+                      {pub.authors.length > 3 && " et al."}
+                    </div>
+                    <div className="flex gap-3 text-sm text-gray-500">
+                      <span>{pub.year}</span>
+                      {pub.citations !== undefined && (
+                        <span>Citations: {pub.citations}</span>
+                      )}
+                      <span className="capitalize">{pub.type}</span>
+                    </div>
                   </div>
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Show More/Less Button */}
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setShowAllPublications(!showAllPublications)}
+              className="inline-flex items-center justify-center text-sm font-medium bg-white border border-gray-200 px-6 py-3 rounded-full hover:bg-gray-50 transition-colors"
+            >
+              {showAllPublications ? "Show Less" : "Show More Publications"}
+            </button>
           </div>
         </div>
       </section>

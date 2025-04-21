@@ -6,6 +6,34 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import Link from "next/link";
 
+// Add this constant at the top with other constants
+const NEWS_ITEMS = [
+  {
+    title: "Eye, Robot: Researchers Give Machines a New Perspective with Active Vision",
+    date: "2024-11-25",
+    link: "https://engineering.ucdavis.edu/news/eye-robot-researchers-give-machines-new-perspective-active-vision",
+    description: "After seeing the gaps in robotics in the automotive industry, Assistant Professor of Mechanical and Aerospace Engineering Iman Soltani is teaching robots to adjust their sight line using active vision and machine learning, hoping to push robotics one step closer to widespread adoption."
+  },
+  {
+    title: "New microscope creates near-real-time videos of nanoscale processes",
+    date: "2015-12-14",
+    link: "https://news.mit.edu/2015/new-microscope-real-time-videos-nanoscale-1214",
+    description: "MIT engineers have designed an atomic force microscope that scans images 2,000 times faster than existing commercial models."
+  },
+  {
+    title: "New MIT microscope takes near real-time videos on a nanoscale",
+    date: "2016-01-07",
+    link: "https://www.bostonglobe.com/ideas/2016/01/07/new-mit-microscope-takes-near-real-time-videos-nanoscale/mIRSbxxqvHKHO1vkLgXYbM/story.html",
+    description: "MIT engineers invent a microscope that can take near real-time video of nanoscale processes."
+  },
+  {
+    title: "Hop, skip or jump? Study says no to all of the above",
+    date: "2013-04-17",
+    link: "https://news.mit.edu/2013/how-early-arthritis-affects-cartilage-0417",
+    description: "MIT engineers find that in the earliest stages of arthritis, high-impact exercise may worsen cartilage damage."
+  }
+];
+
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
   return posts.map((post) => ({ slug: post.slug }));
