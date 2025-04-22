@@ -52,9 +52,10 @@ export async function generateMetadata({
     title,
     publishedAt: publishedTime,
     summary: description,
+    thumbnail,
     image,
   } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  let ogImage = image || thumbnail ? `${DATA.url}${image || thumbnail}` : `${DATA.url}/og?title=${title}`;
 
   return {
     title,
@@ -152,18 +153,18 @@ export default async function BlogPost({
       </div>
       
       {/* Featured image */}
-      {post.metadata.image && (
+      {(post.metadata.thumbnail || post.metadata.image) && (
         <div className="mb-12">
           <img 
-            src={post.metadata.image}
+            src={post.metadata.thumbnail || post.metadata.image}
             alt={post.metadata.title}
             className="w-full h-auto rounded-lg"
           />
         </div>
       )}
       
-      {/* If no image is specified, use the default OpenAI style image */}
-      {!post.metadata.image && (
+      {/* If no image is specified, use the default image */}
+      {!post.metadata.thumbnail && !post.metadata.image && (
         <div className="mb-12">
           <img 
             src="https://images.ctfassets.net/kftzwdyauwt9/32cmTSUIF5POX5FMuoHJwO/be8b42b8016957ca28e07274f05f1d3d/stangel-2022-0527.webp?w=3840&q=90&fm=webp"

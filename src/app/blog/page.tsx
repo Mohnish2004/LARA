@@ -132,7 +132,7 @@ export default async function BlogPage() {
                       {/* Image */}
                       <div className="aspect-[4/3] mb-6 overflow-hidden rounded-lg bg-gray-100">
                         <img
-                          src={post.metadata.image || "https://images.ctfassets.net/kftzwdyauwt9/32cmTSUIF5POX5FMuoHJwO/be8b42b8016957ca28e07274f05f1d3d/stangel-2022-0527.webp"}
+                          src={post.metadata.thumbnail || post.metadata.image || "https://images.ctfassets.net/kftzwdyauwt9/32cmTSUIF5POX5FMuoHJwO/be8b42b8016957ca28e07274f05f1d3d/stangel-2022-0527.webp"}
                           alt={post.metadata.title}
                           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />

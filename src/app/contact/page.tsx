@@ -25,7 +25,7 @@ export default function Contact() {
             </div>
             <div className="w-full md:w-1/3 aspect-[4/3]">
               <img 
-                src="https://images.ctfassets.net/kftzwdyauwt9/32cmTSUIF5POX5FMuoHJwO/be8b42b8016957ca28e07274f05f1d3d/stangel-2022-0527.webp"
+                src="/h1.png"
                 alt="LARA Lab environment" 
                 className="w-full h-full object-cover rounded-lg"
               />

@@ -36,6 +36,11 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "arXiv preprint",
       link: "https://arxiv.org/abs/2504.06379",
       type: "preprint",
+      media: {
+        type: "image",
+        url: "/publications/assistive.png",
+        thumbnail: "/publications/assistive.png"
+      }
       // media: {
       //   type: "video",
       //   url: "/publications/user.mp4",
@@ -60,7 +65,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       year: 2025,
       venue: "arXiv",
       link: "https://arxiv.org/abs/2502.12539",
-      type: "preprint"
+      type: "preprint",
+      media: {
+        type: "image",
+        url: "/publications/dual.png",
+        thumbnail: "/publications/dual.png"
+      }
     },
     {
       title: "Anomaly augmented generative adversarial network",
@@ -69,7 +79,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "US Patent 12,165,067",
       citations: 1,
       link: "https://patents.google.com/patent/US12165067B2/en",
-      type: "patent"
+      type: "patent",
+      media: {
+        type: "image",
+        url: "/publications/Anomaly.png",
+        thumbnail: "/publications/Anomaly.png"
+      }
     },
     {
       title: "Targeted collapse regularized autoencoder for anomaly detection: black hole at the center",
@@ -78,7 +93,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "IEEE Transactions on Neural Networks and Learning Systems",
       citations: 1,
       link: "https://ieeexplore.ieee.org/abstract/document/10720395",
-      type: "journal"
+      type: "journal",
+      media: {
+        type: "image",
+        url: "/publications/collapse.png",
+        thumbnail: "/publications/collapse.png"
+      }
     },
     {
       title: "Cardreamer: Open-source learning platform for world model based autonomous driving",
@@ -141,7 +161,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "Ophthalmology Science 4 (5), 100470",
       link: "https://www.sciencedirect.com/science/article/pii/S266691452400006X",
       citations: 1,
-      type: "journal"
+      type: "journal",
+      media: {
+        type: "image",
+        url: "/publications/retino.png",
+        thumbnail: "/publications/retino.png"
+      }
     },
     {
       title: "Assessing the impact of driver compliance on traffic flow and safety in work zones amid varied mixed autonomy scenarios",
@@ -176,7 +201,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       year: 2023,
       venue: "US Patent 11,829,131",
       link: "https://patents.google.com/patent/US11829131B2/en",
-      type: "patent"
+      type: "patent",
+      media: {
+        type: "image",
+        url: "/publications/vehicle.png",
+        thumbnail: "/publications/vehicle.png"
+      }
     },
     {
       title: "Deep Bayesian-Assisted Keypoint Detection for Pose Estimation in Assembly Automation",
