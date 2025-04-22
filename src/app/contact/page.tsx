@@ -87,7 +87,7 @@ export default function Contact() {
                   </p>
                   
                   <div className="space-y-4">
-                    {['Machine Learning & AI', 'Robotics (ROS)', 'Computer Vision & Optics'].map((skill) => (
+                    {['Machine Learning & AI', 'Robotics', 'Computer Vision & Opto-mechatronics'].map((skill) => (
                       <div key={skill} className="flex items-center gap-3">
                         <div className="w-1 h-1 bg-black rounded-full" />
                         <p>{skill}</p>

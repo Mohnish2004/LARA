@@ -59,7 +59,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["D Kumar", "A Ghorbanpour", "K Yen", "I Soltani"],
       year: 2025,
       venue: "arXiv",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:vV6vV6tmYwMC",
+      link: "https://arxiv.org/abs/2502.12539",
       type: "preprint"
     },
     {
@@ -68,7 +68,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       year: 2024,
       venue: "US Patent 12,165,067",
       citations: 1,
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:4JMBOYKVnBMC",
+      link: "https://patents.google.com/patent/US12165067B2/en",
       type: "patent"
     },
     {
@@ -77,7 +77,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       year: 2024,
       venue: "IEEE Transactions on Neural Networks and Learning Systems",
       citations: 1,
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:k_IJM867U9cC",
+      link: "https://ieeexplore.ieee.org/abstract/document/10720395",
       type: "journal"
     },
     {
@@ -86,7 +86,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       year: 2024,
       venue: "IEEE Internet of Things Journal",
       citations: 4,
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:GnPB-g6toBAC",
+      link: "https://ieeexplore.ieee.org/abstract/document/10714437",
       type: "journal",
       media: {
         type: "video",
@@ -99,7 +99,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["E Kazemi", "I Soltani"],
       year: 2024,
       venue: "arXiv e-prints",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:lSLTfruPkqcC",
+      link: "https://arxiv.org/abs/2410.13973",
       type: "preprint",
       media: {
         type: "video",
@@ -112,7 +112,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["I Chuang", "A Lee", "D Gao", "I Soltani"],
       year: 2024,
       venue: "arXiv preprint",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:O3NaXMp0MMsC",
+      link: "https://arxiv.org/abs/2409.17435",
       citations: 5,
       type: "preprint",
       media: {
@@ -125,7 +125,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["A Lee", "I Chuang", "LY Chen", "I Soltani"],
       year: 2024,
       venue: "arXiv preprint",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:YFjsv_pBGBYC",
+      link: "https://arxiv.org/abs/2409.07914",
       citations: 5,
       type: "preprint",
       media: {
@@ -139,7 +139,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["A Nisanova", "A Yavary", "J Deaner", "FS Ali", "P Gogte", "R Kaplan", "KC Chen"],
       year: 2024,
       venue: "Ophthalmology Science 4 (5), 100470",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:hMod-77fHWUC",
+      link: "https://www.sciencedirect.com/science/article/pii/S266691452400006X",
       citations: 1,
       type: "journal"
     },
@@ -148,7 +148,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Ehsan Kazemi"],
       year: 2024,
       venue: "Transportation Research Interdisciplinary Perspectives 27",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:NMxIlDl6LWMC",
+      link: "https://www.sciencedirect.com/science/article/pii/S2590198224001994",
       citations: 1,
       type: "journal",
       media: {
@@ -162,7 +162,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["A Ghafourian", "Z CuiZhu", "D Shi", "I Chuang", "F Charette", "R Sachdeva"],
       year: 2024,
       venue: "IEEE Robotics and Automation Letters 9 (4), 3211-3218",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:JV2RwH3_ST0C",
+      link: "https://ieeexplore.ieee.org/abstract/document/10433735",
       citations: 2,
       type: "journal",
       media: {
@@ -175,7 +175,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Bozchalooi", "F Charette", "DP Filev", "R Burke", "D Upadhyay"],
       year: 2023,
       venue: "US Patent 11,829,131",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:bEWYMUwI8FkC",
+      link: "https://patents.google.com/patent/US11829131B2/en",
       type: "patent"
     },
     {
@@ -183,7 +183,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Debo Shi", "Alireza Rahimpour", "Amin Ghafourian", "Mohammad Mahdi Naddaf"],
       year: 2023,
       venue: "Sensors 23 (13)",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:maZDTaKrznsC",
+      link: "https://www.mdpi.com/1424-8220/23/13/6107",
       citations: 5,
       type: "journal",
       media: {
@@ -197,7 +197,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["Z CuiZhu", "F Charette", "A Ghafourian", "D Shi", "M Cui", "A Krishnamachar"],
       year: 2023,
       venue: "arXiv preprint",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:BqipwSGYUEgC",
+      link: "https://arxiv.org/abs/2306.08865",
       citations: 1,
       type: "preprint",
       media: {
@@ -211,7 +211,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["Z Yang", "I Soltani", "E Darve"],
       year: 2023,
       venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:_Qo2XoVZTnwC",
+      link: "https://openaccess.thecvf.com/content/CVPR2023W/VAND/html/Yang_Anomaly_Detection_With_Domain_Adaptation_CVPRW_2023_paper.html",
       citations: 43,
       type: "conference"
     },
@@ -220,7 +220,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Bozchalooi", "A Rahimpour", "D Upadhyay"],
       year: 2022,
       venue: "US Patent 11,423,571",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:TFP_iSt0sucC",
+      link: "https://patents.google.com/patent/US11423571B2/en",
       type: "patent"
     },
     {
@@ -228,7 +228,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["Z Yang", "T Zhang", "IS Bozchalooi", "E Darve"],
       year: 2021,
       venue: "IEEE Transactions on Neural Networks and Learning Systems 33 (6), 2324-2334",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:mB3voiENLucC",
+      link: "https://ieeexplore.ieee.org/abstract/document/9664442",
       citations: 32,
       type: "journal"
     },
@@ -237,7 +237,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Bozchalooi", "F Charette", "P Narayanan", "R Burke", "D Upadhyay", "DP Filev"],
       year: 2021,
       venue: "US Patent App. 16/904,653",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:iH-uZ7U-co4C",
+      link: "https://patents.google.com/patent/US20210397198A1/en",
       citations: 5,
       type: "patent"
     },
@@ -246,7 +246,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Bozchalooi"],
       year: 2021,
       venue: "US Patent 11,126,190",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:RHpTSmoSYBkC",
+      link: "https://patents.google.com/patent/US11126190B2/en",
       citations: 5,
       type: "patent"
     },
@@ -255,7 +255,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Bozchalooi", "F Assadian", "L Scaria"],
       year: 2021,
       venue: "US Patent 11,069,161",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:r0BpntZqJG4C",
+      link: "https://patents.google.com/patent/US11069161B2/en",
       citations: 6,
       type: "patent"
     },
@@ -264,7 +264,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Bozchalooi", "F Assadian"],
       year: 2021,
       venue: "US Patent 10,926,416",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:e5wmG9Sq2KIC",
+      link: "https://patents.google.com/patent/US10926416B2/en",
       type: "patent"
     },
     {
@@ -272,7 +272,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Bozchalooi", "F Assadian"],
       year: 2021,
       venue: "US Patent 10,929,714",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:R3hNpaxXUhUC",
+      link: "https://patents.google.com/patent/US10929714B2/en",
       citations: 1,
       type: "patent"
     },
@@ -281,7 +281,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Bozchalooi"],
       year: 2020,
       venue: "US Patent App. 16/197,649",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:HDshCWvjkbEC",
+      link: "https://patents.google.com/patent/US20200156241A1/en",
       citations: 1,
       type: "patent",
       media: {
@@ -295,7 +295,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["IS Bozchalooi", "K Youcef-Toumi"],
       year: 2020,
       venue: "US Patent 10,649,072",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&citation_for_view=BJ2teVoAAAAJ:L8Ckcad2t8MC",
+      link: "https://patents.google.com/patent/US10649072/en",
       citations: 33,
       type: "patent",
       media: {
@@ -309,7 +309,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       authors: ["Z Yang", "I Soltani Bozchalooi", "E Darve"],
       year: 2020,
       venue: "ECAI 2020, 1618-1625",
-      link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=BJ2teVoAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=BJ2teVoAAAAJ:hFOr9nPyWt4C",
+      link: "https://ebooks.iospress.nl/volumearticle/55067",
       citations: 17,
       type: "conference",
       media: {

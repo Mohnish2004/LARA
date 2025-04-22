@@ -5,15 +5,11 @@ export const faqs = [
   },
   {
     question: "What are the main research areas?",
-    answer: "LARA Lab focuses on AI, robotics, automation, autonomous systems, industrial diagnostics, and healthcare solutions."
+    answer: "LARA focuses on AI, robotics, automation, industrial diagnostics, and healthcare solutions."
   },
   {
     question: "Are there any open positions?",
-    answer: "Yes, we offer positions for PhD and Master's students with experience in machine learning, robotics (ROS), and optics."
-  },
-  {
-    question: "What kind of projects does LARA work on?",
-    answer: "Our projects range from autonomous driving systems and industrial automation to healthcare diagnostics and nano-robotics."
+    answer: "Yes, we offer positions for PhD and Master's students with experience in machine learning, robotics, and  opto-mechatronics."
   },
   {
     question: "How can I access the lab's publications?",

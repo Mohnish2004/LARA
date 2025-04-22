@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "Are there any open positions?",
     answer:
-      "Yes, we offer positions for PhD and Master's students with experience in machine learning, robotics (ROS), and optics.",
+      "Yes, we offer positions for PhD and Master's students with experience in machine learning, robotics, and opto-mechatronics.",
   },
   {
     question: "What kind of projects does LARA work on?",
@@ -59,7 +59,7 @@ const researchAreas = [
     )
   },
   {
-    title: "Industrial Automation",
+    title: "Industrial Diagnostics",
     description: "Creating solutions that enhance efficiency and safety in manufacturing and industrial processes",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -139,14 +139,10 @@ const featuredPublications = [
 ];
 
 export default function Page() {
-  // Get the first 3 projects for a cleaner layout
   const featuredProjects = DATA.projects.slice(0, 3);
-
-  // Add state for expanded publications
-  const [showAllPublications, setShowAllPublications] = useState(false);
   
-  // Get initial publications (first 3) or all based on state
-  const displayedPublications = showAllPublications ? ALL_PUBLICATIONS : ALL_PUBLICATIONS.slice(0, 3);
+  // Remove the state and just use all publications
+  const displayedPublications = ALL_PUBLICATIONS;
 
   return (
     <main className="flex flex-col">
@@ -174,7 +170,7 @@ export default function Page() {
       <section className="relative w-full h-[60vh] mb-24">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 z-10" />
         <img 
-          src="https://engineering.ucdavis.edu/sites/g/files/dgvnsk2151/files/styles/sf_landscape_16x9/public/media/images/54153856858_e90b921e2f_k.jpg?h=31fb5ac6&itok=d61g3vd3"
+          src="/h0.jpg"
           alt="UC Davis Engineering Building"
           className="w-full h-full object-cover"
         />
@@ -198,7 +194,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Featured Projects/Publications Section - Updated with expand functionality */}
+      {/* Featured Projects/Publications Section */}
       <section className="px-6 md:px-10 py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-between items-center mb-16">
@@ -267,16 +263,6 @@ export default function Page() {
                 </div>
               </Link>
             ))}
-          </div>
-
-          {/* Show More/Less Button */}
-          <div className="mt-12 text-center">
-            <button
-              onClick={() => setShowAllPublications(!showAllPublications)}
-              className="inline-flex items-center justify-center text-sm font-medium bg-white border border-gray-200 px-6 py-3 rounded-full hover:bg-gray-50 transition-colors"
-            >
-              {showAllPublications ? "Show Less" : "Show More Publications"}
-            </button>
           </div>
         </div>
       </section>

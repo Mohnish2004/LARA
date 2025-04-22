@@ -32,17 +32,17 @@ const researchApproach = [
   {
     title: "Interdisciplinary Research",
     description: "Our work bridges the gap between AI, robotics, computer vision, and mechanical engineering to create holistic solutions.",
-    imageUrl: "/images/interdisciplinary-research.jpg"
+    imageUrl: "/h1.png"
   },
   {
     title: "Real-world Applications",
     description: "We develop technologies that have practical applications in healthcare, manufacturing, autonomous vehicles, and more.",
-    imageUrl: "/images/real-world-applications.jpg"
+    imageUrl: "/h2.jpg"
   },
   {
     title: "Cutting-edge Facilities",
     description: "Our laboratory is equipped with state-of-the-art equipment and technology to support innovative research and experimentation.",
-    imageUrl: "/images/research-facilities.jpg"
+    imageUrl: "/h3.jpg"
   }
 ];
 
@@ -109,7 +109,7 @@ export default function About() {
                   <div className="w-full md:w-1/2 h-60 bg-gray-200 rounded-lg overflow-hidden">
                     {/* Placeholder for actual images */}
                     <div className="w-full h-full flex items-center justify-center text-gray-400 text-[15px]">
-                      [Image: {item.title}]
+                      <Image src={item.imageUrl} alt={item.title} width={500} height={500} />
                     </div>
                   </div>
                   <div className="w-full md:w-1/2">

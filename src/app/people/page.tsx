@@ -32,7 +32,6 @@ const people = {
   ],
   mastersStudents: [
     { name: "Kokul Aananth Kathiravan Kavitha", major: "Mechanical and Aerospace Engineering", image: "/pics/KokulAananthKathiravanKavitha.jpg" },
-    { name: "Hemachandran Balaji", major: "Computer Science", image: "/pics/HemachandranBalaji.png" },
     { name: "Ling-Yuan Chen", major: "Mechanical and Aerospace Engineering", image: "/pics/Ling-YuanChen.jpeg" },
     { name: "Soumyajit Ganguly", major: "Mechanical and Aerospace Engineering", image: "/pics/SoumyajitGanguly.jpg" },
     { name: "Hrushikesh Mathi", major: "Mechanical and Aerospace Engineering", image: "/pics/HrushikeshMathi.jpg" },

@@ -8,24 +8,19 @@ import { ALL_PUBLICATIONS } from "@/data/publications";
 
 
 export default function Publications() {
-  const [sortBy, setSortBy] = useState<"year" | "citations">("year");
+  const [sortBy, setSortBy] = useState<"year">("year");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
 
-  const sortedPublications = [...ALL_PUBLICATIONS].sort((a, b) => {
-    const order = sortOrder === "desc" ? -1 : 1;
-    if (sortBy === "year") {
+  // Filter out patents and sort remaining publications
+  const sortedPublications = [...ALL_PUBLICATIONS]
+    .filter(pub => pub.type !== "patent")
+    .sort((a, b) => {
+      const order = sortOrder === "desc" ? -1 : 1;
       return (a.year - b.year) * order;
-    }
-    return ((a.citations || 0) - (b.citations || 0)) * order;
-  });
+    });
 
-  const toggleSort = (type: "year" | "citations") => {
-    if (sortBy === type) {
-      setSortOrder(sortOrder === "desc" ? "asc" : "desc");
-    } else {
-      setSortBy(type);
-      setSortOrder("desc");
-    }
+  const toggleSort = (type: "year") => {
+    setSortOrder(sortOrder === "desc" ? "asc" : "desc");
   };
 
   return (
@@ -38,12 +33,6 @@ export default function Publications() {
             <h1 className="text-[64px] font-medium tracking-tight leading-none mb-2">
               Publications
             </h1>
-            <Link 
-              href="/patents" 
-              className="inline-flex items-center text-sm text-gray-600 hover:text-black transition-colors w-fit"
-            >
-              Looking for patents? View our patent portfolio →
-            </Link>
           </div>
         </div>
       </section>
@@ -57,18 +46,11 @@ export default function Publications() {
               className="flex items-center gap-1 text-sm text-gray-600 hover:text-black transition-colors"
             >
               Sort by Year
-              {sortBy === "year" && (sortOrder === "desc" ? <ChevronDown size={16} /> : <ChevronUp size={16} />)}
-            </button>
-            <button
-              onClick={() => toggleSort("citations")}
-              className="flex items-center gap-1 text-sm text-gray-600 hover:text-black transition-colors"
-            >
-              Sort by Citations
-              {sortBy === "citations" && (sortOrder === "desc" ? <ChevronDown size={16} /> : <ChevronUp size={16} />)}
+              {sortOrder === "desc" ? <ChevronDown size={16} /> : <ChevronUp size={16} />}
             </button>
           </div>
 
-          {/* Updated Publications List */}
+          {/* Publications List */}
           <div className="space-y-12">
             {sortedPublications.map((pub, index) => (
               <div key={index} className="flex flex-col md:flex-row gap-8 border-b border-gray-100 pb-12 last:border-0">
@@ -127,11 +109,8 @@ export default function Publications() {
 
                   <div className="flex gap-4 text-sm">
                     <span className="text-gray-600">{pub.venue}</span>
-                    <span className="text-gray-600">{pub.year}</span>
-                    {pub.citations !== undefined && (
-                      <span className="text-gray-600">Citations: {pub.citations}</span>
-                    )}
                     <span className="text-gray-500 capitalize">{pub.type}</span>
+                    <span className="text-gray-600">{pub.year}</span>
                   </div>
                 </div>
               </div>

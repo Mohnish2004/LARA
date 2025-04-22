@@ -9,7 +9,7 @@ export const contactInfo = {
   },
   researchAreas: [
     "Machine Learning & AI",
-    "Robotics (ROS)",
-    "Computer Vision & Optics"
+    "Robotics",
+    "Computer Vision & Opto-mechatronics"
   ]
 }; 
