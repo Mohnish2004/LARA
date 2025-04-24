@@ -170,7 +170,7 @@ export default function Page() {
       <section className="relative w-full h-[60vh] mb-24">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 z-10" />
         <img 
-          src="/h0.jpg"
+          src="/h2.jpg"
           alt="UC Davis Engineering Building"
           className="w-full h-full object-cover"
         />
