@@ -67,9 +67,9 @@ export const ALL_PUBLICATIONS: Publication[] = [
       link: "https://arxiv.org/abs/2502.12539",
       type: "preprint",
       media: {
-        type: "image",
-        url: "/publications/dual.png",
-        thumbnail: "/publications/dual.png"
+        type: "video",
+        url: "/publications/dual.mp4",
+        thumbnail: "/publications/dual.mp4"
       }
     },
     {
