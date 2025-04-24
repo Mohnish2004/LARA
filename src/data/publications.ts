@@ -243,7 +243,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
       link: "https://openaccess.thecvf.com/content/CVPR2023W/VAND/html/Yang_Anomaly_Detection_With_Domain_Adaptation_CVPRW_2023_paper.html",
       citations: 43,
-      type: "conference"
+      type: "conference",
+      media: {
+        type: "image",
+        url: "/publications/Anomalydetection.png",
+        thumbnail: "/publications/Anomalydetection.png"
+      }
     },
     {
       title: "Systems and methods for image-based component detection",
@@ -251,7 +256,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       year: 2022,
       venue: "US Patent 11,423,571",
       link: "https://patents.google.com/patent/US11423571B2/en",
-      type: "patent"
+      type: "patent",
+      media: {
+        type: "image",
+        url: "/publications/Systemsmethods.png",
+        thumbnail: "/publications/Systemsmethods.png"
+      }
     },
     {
       title: "Memory-augmented generative adversarial networks for anomaly detection",
@@ -260,7 +270,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "IEEE Transactions on Neural Networks and Learning Systems 33 (6), 2324-2334",
       link: "https://ieeexplore.ieee.org/abstract/document/9664442",
       citations: 32,
-      type: "journal"
+      type: "journal",
+      media: {
+        type: "image",
+        url: "/publications/Memory-augmented.png",
+        thumbnail: "/publications/Memory-augmented.png"
+      }
     },
     {
       title: "Enhanced vehicle operation",
@@ -269,7 +284,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "US Patent App. 16/904,653",
       link: "https://patents.google.com/patent/US20210397198A1/en",
       citations: 5,
-      type: "patent"
+      type: "patent",
+      media: {
+        type: "image",
+        url: "/publications/Enhanced-vehicle.png",
+        thumbnail: "/publications/Enhanced-vehicle.png"
+      }
     },
     {
       title: "Learning systems and methods",
@@ -278,7 +298,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "US Patent 11,126,190",
       link: "https://patents.google.com/patent/US11126190B2/en",
       citations: 5,
-      type: "patent"
+      type: "patent",
+      media: {
+        type: "image",
+        url: "/publications/learning-systems.png",
+        thumbnail: "/publications/learning-systems.png"
+      }
     },
     {
       title: "Adaptive sensor fusion",
@@ -287,7 +312,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "US Patent 11,069,161",
       link: "https://patents.google.com/patent/US11069161B2/en",
       citations: 6,
-      type: "patent"
+      type: "patent",
+      media: {
+        type: "image",
+        url: "/publications/Adaptive-sensor.png",
+        thumbnail: "/publications/Adaptive-sensor.png"
+      }
     },
     {
       title: "Robotic manipulation using an independently actuated vision system, an adversarial control scheme, and a multi-tasking deep learning architecture",
@@ -295,7 +325,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       year: 2021,
       venue: "US Patent 10,926,416",
       link: "https://patents.google.com/patent/US10926416B2/en",
-      type: "patent"
+      type: "patent",
+      media: {
+        type: "image",
+        url: "/publications/Robotic-manipulation.png",
+        thumbnail: "/publications/Robotic-manipulation.png"
+      }
     },
     {
       title: "High-throughput automated annotation of visual data for training neural networks used for landmark detection",
@@ -304,7 +339,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "US Patent 10,929,714",
       link: "https://patents.google.com/patent/US10929714B2/en",
       citations: 1,
-      type: "patent"
+      type: "patent",
+      media: {
+        type: "image",
+        url: "/publications/High-throughput.png",
+        thumbnail: "/publications/High-throughput.png"
+      }
     },
     {
       title: "Automation safety and performance robustness through uncertainty driven learning and control",
@@ -369,7 +409,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)",
       link: "https://ieeexplore.ieee.org/abstract/document/7963591",
       type: "conference",
-      citations: 12
+      citations: 12,
+      media: {
+        type: "image",
+        url: "/publications/Induced-vibration.png",
+        thumbnail: "/publications/Induced-vibration.png"
+      }
     },
     {
       title: "Design and control of multi-actuated atomic force microscope for large-range and high-speed imaging",
@@ -392,7 +437,12 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "American Control Conference (ACC)",
       link: "https://ieeexplore.ieee.org/document/7171012",
       type: "conference",
-      citations: 15
+      citations: 15,
+      media: {
+        type: "image",
+        url: "/publications/Information-guided.png",
+        thumbnail: "/publications/Information-guided.png"
+      }
     },
     {
       title: "Estimator based multi-eigenmode control of cantilevers in multifrequency Atomic Force Microscopy",
@@ -401,6 +451,11 @@ export const ALL_PUBLICATIONS: Publication[] = [
       venue: "American Control Conference (ACC)",
       link: "https://ieeexplore.ieee.org/abstract/document/7171011",
       type: "conference",
-      citations: 28
+      citations: 28,
+      media: {
+        type: "image",
+        url: "/publications/Estimator-based.png",
+        thumbnail: "/publications/Estimator-based.png"
+      }
     }
   ];
