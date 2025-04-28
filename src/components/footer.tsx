@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="py-12">
         <div className="flex flex-col space-y-8">
           {/* Main Footer Content */}
-          <div className="flex flex-col md:flex-row md:justify-between gap-4 text-[13px]">
+          <div className="flex flex-col md:flex-row md:justify-between gap-4 ml-4 text-[13px]">
             <div className="space-y-1 text-gray-600">
               <p>University of California, Davis</p>
               <p>One Shields Avenue, Davis, CA 95616</p>
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Build Info */}
-          <div className="flex flex-col md:flex-row md:justify-between items-start md:items-center gap-2 text-[11px] text-gray-400">
+          <div className="flex flex-col md:flex-row md:justify-between items-start md:items-center gap-2 text-[11px] ml-4 text-gray-400">
             <span>Last updated: {lastUpdated}</span>
             <div className="flex items-center gap-1">
               <span>Built by</span>

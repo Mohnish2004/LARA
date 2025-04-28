@@ -138,7 +138,7 @@ export default function People() {
                 <p className="text-[15px] text-gray-600 mb-4">{people.director[0].title}</p>
                 <p className="text-[15px] text-gray-600 mb-6">{people.director[0].major}</p>
                 <Link 
-                  href="/about"
+                  href="/people/iman-soltani"
                   className="text-[14px] bg-black text-white px-4 py-1.5 rounded-full hover:bg-gray-800 transition-colors"
                 >
                   Learn More →
