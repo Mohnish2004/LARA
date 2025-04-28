@@ -38,7 +38,7 @@ export default function ImanSoltani() {
             <p>
               Before joining UC Davis, he worked at the Ford Greenfield Labs in Palo Alto, 
               CA, where he founded and led the Advanced Automation Laboratory. He earned his 
-              bachelor's, master's, and PhD in mechanical engineering from Tehran Polytechnic 
+              bachelor&apos;s, master&apos;s, and PhD in mechanical engineering from Tehran Polytechnic 
               (Iran), the University of Ottawa (Canada), and the Massachusetts Institute of 
               Technology (MIT), respectively.
             </p>
@@ -53,7 +53,7 @@ export default function ImanSoltani() {
             <p>
               His research has been featured in prominent outlets such as The Boston Globe, 
               Elsevier Materials Today, ScienceDaily, and MIT News. Among his numerous awards 
-              are the MIT Carl G. Sontheimer Award and National Instruments' Engineering 
+              are the MIT Carl G. Sontheimer Award and National Instruments&apos; Engineering 
               Impact Award.
             </p>
           </div>
