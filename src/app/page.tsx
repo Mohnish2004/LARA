@@ -141,8 +141,10 @@ const featuredPublications = [
 export default function Page() {
   const featuredProjects = DATA.projects.slice(0, 3);
   
-  // Remove the state and just use all publications
-  const displayedPublications = ALL_PUBLICATIONS;
+  // Filter out patents and show all remaining publications
+  const displayedPublications = ALL_PUBLICATIONS
+    .filter(pub => pub.type !== "patent")
+    .sort((a, b) => b.year - a.year); // Sort by year in descending order
 
   return (
     <main className="flex flex-col">
@@ -249,15 +251,16 @@ export default function Page() {
                       {pub.title}
                     </h3>
                     <div className="text-sm text-gray-600 mb-2">
-                      {pub.authors.slice(0, 3).join(", ")}
-                      {pub.authors.length > 3 && " et al."}
+                      {pub.authors.map((author, i) => (
+                        <span key={i}>
+                          {author}{i < pub.authors.length - 1 ? ", " : ""}
+                        </span>
+                      ))}
                     </div>
-                    <div className="flex gap-3 text-sm text-gray-500">
-                      <span>{pub.year}</span>
-                      {pub.citations !== undefined && (
-                        <span>Citations: {pub.citations}</span>
-                      )}
-                      <span className="capitalize">{pub.type}</span>
+                    <div className="flex gap-4 text-sm">
+                      <span className="text-gray-600">{pub.venue}</span>
+                      <span className="text-gray-500 capitalize">{pub.type}</span>
+                      <span className="text-gray-600">{pub.year}</span>
                     </div>
                   </div>
                 </div>
