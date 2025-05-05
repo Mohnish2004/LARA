@@ -53,6 +53,7 @@ export const ALL_PUBLICATIONS: Publication[] = [
       year: 2025,
       venue: "arXiv preprint",
       type: "preprint",
+      link: "https://arxiv.org/abs/2504.14078",
       media: {
         type: "video",
         url: "/publications/harsh1.mp4",
