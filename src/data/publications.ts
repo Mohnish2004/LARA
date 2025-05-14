@@ -144,11 +144,10 @@ export const ALL_PUBLICATIONS: Publication[] = [
     {
       title: "Active vision might be all you need: Exploring active vision in bimanual robotic manipulation",
       authors: ["I Chuang", "A Lee", "D Gao", "I Soltani"],
-      year: 2024,
-      venue: "arXiv preprint",
+      year: 2025,
+      venue: "IEEE International Conference on Robotics and Automation (ICRA)",
       link: "https://arxiv.org/abs/2409.17435",
-      citations: 5,
-      type: "preprint",
+      type: "conference",
       media: {
         type: "image",
         url: "/publications/av-aloha.gif"
@@ -158,10 +157,9 @@ export const ALL_PUBLICATIONS: Publication[] = [
       title: "InterACT: Inter-dependency Aware Action Chunking with Hierarchical Attention Transformers for Bimanual Manipulation",
       authors: ["A Lee", "I Chuang", "LY Chen", "I Soltani"],
       year: 2024,
-      venue: "arXiv preprint",
+      venue: "Conference on Robot Learning (CoRL)",
       link: "https://arxiv.org/abs/2409.07914",
-      citations: 5,
-      type: "preprint",
+      type: "conference",
       media: {
         type: "video",
         url: "/publications/InteractDemo.mp4",
