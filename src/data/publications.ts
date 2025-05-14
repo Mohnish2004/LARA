@@ -11,7 +11,6 @@ type Publication = {
     type: "image" | "video";
     url: string;
     thumbnail?: string;
-    videoId?: string;
   };
 };
 
@@ -39,9 +38,8 @@ export const ALL_PUBLICATIONS: Publication[] = [
       type: "preprint",
       media: {
         type: "video",
-        url: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
-        thumbnail: "/publications/krysalis-thumbnail.jpg",
-        videoId: "YOUR_VIDEO_ID"
+        url: "/publications/krysalis.mp4",
+        thumbnail: "/publications/krysalis.mp4"
       }
     },
     {
