@@ -4,8 +4,10 @@ import Link from "next/link";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Footer from "@/components/footer";
 import { ALL_PUBLICATIONS } from "@/data/publications";
+import Image from 'next/image';
 
-
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour
 
 export default function Publications() {
   const [sortBy, setSortBy] = useState<"year">("year");
@@ -65,15 +67,18 @@ export default function Publications() {
                         muted
                         loop
                         playsInline
-                        preload="auto"
+                        preload="none"
                       >
                         <source src={pub.media.url} type="video/mp4" />
                       </video>
                     ) : (
-                      <img
+                      <Image 
                         src={pub.media.url}
                         alt={pub.title}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        priority={index < 3}
                       />
                     )
                   ) : (
