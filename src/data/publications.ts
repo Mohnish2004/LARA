@@ -17,6 +17,19 @@ type Publication = {
 // Publications data
 export const ALL_PUBLICATIONS: Publication[] = [
     {
+      title: "Automating Infrastructure Surveying: A Framework for Geometric Measurements and Compliance Assessment Using Point Cloud Data",
+      authors: ["Amin Ghafourian", "Andrew Lee", "Dechen Gao", "Tyler Beer", "Kin Yen", "Iman Soltani"],
+      year: 2025,
+      venue: "arXiv preprint",
+      link: "https://arxiv.org/abs/2505.05752",
+      type: "preprint",
+      media: {
+        type: "image",
+        url: "/publications/Automating.png",
+        thumbnail: "/publications/Automating.png"
+      }
+    },
+    {
       title: "Krysalis Hand: A Lightweight, High-Payload, 18-DoF Anthropomorphic End-Effector for Robotic Learning and Dexterous Manipulation",
       authors: ["A Basheer", "J Chang", "Y Chen", "D Kim", "I Soltani"],
       year: 2025,
