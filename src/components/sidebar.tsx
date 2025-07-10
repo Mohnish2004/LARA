@@ -1,11 +1,12 @@
 'use client';
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from 'next/navigation';
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { FaLinkedin, FaGoogle, FaGithub, FaEnvelope } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Menu, X } from "lucide-react";
-import { useState, useEffect } from "react";
 
 const sidebarLinks = [
   { name: "Home", href: "/" },
@@ -65,10 +66,11 @@ export default function Sidebar() {
               className="flex items-center px-5 pt-6 pb-10"
               onClick={() => setIsOpen(false)}
             >
-              <img 
+              <Image 
                 src="/LARALOGO.png" 
                 alt="LARA Lab" 
-                className="h-10 object-contain"
+                width={40}
+                height={40}
               />
             </Link>
             

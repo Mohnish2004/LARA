@@ -1,10 +1,11 @@
-import { getBlogPosts, getPost } from "@/data/blog";
 import { DATA } from "@/data/resume";
+import { getBlogPosts, getPost } from "@/data/blog";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import Link from "next/link";
 
 // Add this constant at the top with other constants
 const NEWS_ITEMS = [
@@ -155,9 +156,11 @@ export default async function BlogPost({
       {/* Featured image */}
       {(post.metadata.thumbnail || post.metadata.image) && (
         <div className="mb-12">
-          <img 
+          <Image
             src={post.metadata.thumbnail || post.metadata.image}
             alt={post.metadata.title}
+            width={1200}
+            height={630}
             className="w-full h-auto rounded-lg"
           />
         </div>
@@ -166,9 +169,11 @@ export default async function BlogPost({
       {/* If no image is specified, use the default image */}
       {!post.metadata.thumbnail && !post.metadata.image && (
         <div className="mb-12">
-          <img 
+          <Image
             src="https://images.ctfassets.net/kftzwdyauwt9/32cmTSUIF5POX5FMuoHJwO/be8b42b8016957ca28e07274f05f1d3d/stangel-2022-0527.webp?w=3840&q=90&fm=webp"
             alt={post.metadata.title}
+            width={1200}
+            height={630}
             className="w-full h-auto rounded-lg"
           />
         </div>

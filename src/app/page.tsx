@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRightIcon } from "lucide-react";
 import Footer from "@/components/footer";
 import { useState } from "react";
@@ -171,10 +172,11 @@ export default function Page() {
       {/* Banner Image - Full bleed with gradient overlay */}
       <section className="relative w-full h-[60vh] mb-24">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/10 z-10" />
-        <img 
+        <Image 
           src="/h2.jpg"
           alt="UC Davis Engineering Building"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
       </section>
 
@@ -231,10 +233,11 @@ export default function Page() {
                           <source src={pub.media.url} type="video/mp4" />
                         </video>
                       ) : (
-                        <img 
+                        <Image 
                           src={pub.media.url}
                           alt={pub.title}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                       )
                     ) : (

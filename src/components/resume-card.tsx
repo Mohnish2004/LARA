@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 interface ResumeCardProps {
@@ -43,9 +44,11 @@ export const ResumeCard = ({
       }}
     >
       <div className="flex items-start gap-4 py-4">
-        <img
+        <Image
           src={logoUrl}
           alt={altText}
+          width={64}
+          height={64}
           className="w-16 h-16 object-cover flex-shrink-0"
         />
         <div className="flex-grow">

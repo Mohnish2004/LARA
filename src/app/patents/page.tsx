@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import Footer from "@/components/footer";
 import { ALL_PUBLICATIONS } from "@/data/publications";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import Image from "next/image";
+import Footer from "@/components/footer";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Patents() {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
@@ -63,10 +65,11 @@ export default function Patents() {
                         <source src={patent.media.url} type="video/mp4" />
                       </video>
                     ) : (
-                      <img
+                      <Image
                         src={patent.media.url}
                         alt={patent.title}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                     )
                   ) : (

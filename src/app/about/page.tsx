@@ -32,7 +32,7 @@ const researchApproach = [
   {
     title: "Interdisciplinary Research",
     description: "Our work bridges the gap between AI, robotics, computer vision, and mechanical engineering to create holistic solutions.",
-    imageUrl: "/h1.png"
+    imageUrl: "/h1_optimized.jpg"
   },
   {
     title: "Real-world Applications",
@@ -42,7 +42,7 @@ const researchApproach = [
   {
     title: "Cutting-edge Facilities",
     description: "Our laboratory is equipped with state-of-the-art equipment and technology to support innovative research and experimentation.",
-    imageUrl: "/h3.jpg"
+    imageUrl: "/h3_optimized.jpg"
   }
 ];
 
@@ -63,9 +63,11 @@ export default function About() {
         
         {/* Large Banner Image */}
         <div className="w-full max-w-5xl mx-auto mb-16">
-          <img 
+          <Image 
             src="https://engineering.ucdavis.edu/sites/g/files/dgvnsk2151/files/media/images/54154025480_f4c0884d88_k.jpg"
             alt="LARA Lab researchers collaborating" 
+            width={1000}
+            height={600}
             className="w-full h-auto rounded-lg object-cover"
           />
         </div>

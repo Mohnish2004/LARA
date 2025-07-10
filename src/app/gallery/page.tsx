@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import BlurFade from "@/components/magicui/blur-fade";
+import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -218,9 +219,11 @@ export default function GalleryPage() {
                   <BlurFade delay={BLUR_FADE_DELAY * index} key={index}>
                     <div className="space-y-4">
                       <div className="aspect-[4/3] overflow-hidden rounded-lg bg-gray-100">
-                        <img
+                        <Image
                           src={image.src}
                           alt={image.title}
+                          width={500}
+                          height={375}
                           className="h-full w-full object-cover"
                         />
                       </div>

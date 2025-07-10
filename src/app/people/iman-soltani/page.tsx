@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Footer from "@/components/footer";
 
 export default function ImanSoltani() {
@@ -9,9 +10,11 @@ export default function ImanSoltani() {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 mb-12">
             <div className="md:w-1/3">
-              <img 
-                src="/Portrait.jpg"
+              <Image 
+                src="/Portrait_optimized.jpg"
                 alt="Dr. Iman Soltani"
+                width={400}
+                height={400}
                 className="w-full rounded-lg object-cover"
               />
             </div>

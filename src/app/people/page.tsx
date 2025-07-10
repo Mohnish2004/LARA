@@ -2,6 +2,7 @@
 
 import BlurFade from "@/components/magicui/blur-fade";
 import Link from "next/link";
+import Image from "next/image";
 import { DATA } from "@/data/resume";
 import Footer from "@/components/footer";
 
@@ -14,12 +15,13 @@ const people = {
       name: "Iman Soltani, PhD",
       title: "Director, LARA Lab",
       major: "Mechanical and Aerospace Engineering (MAE), Electrical and Computer Engineering (ECE), Computer Science (CS)",
-      image: "/Portrait.jpg"
+      image: "/Portrait_optimized.jpg"
     }
   ],
-  postdoctoralFellows: [
-    { name: "Amin Ghafourian", major: "Mechanical and Aerospace Engineering", image: "/pics/AminGhafourianMomenzadeh.jpeg" },
+  researchScientists: [
     { name: "Mahdi Naddaf", major: "Mechanical and Aerospace Engineering", image: "/pics/mahdi.png" }
+  ],
+  postdoctoralFellows: [
   ],
   phdStudents: [
     { name: "Ziba Fazel", major: "Mechanical and Aerospace Engineering", image: "/pics/ZibaFazel.jpg" },
@@ -57,7 +59,8 @@ const people = {
     { name: "Vamsi Chilamkur", major: "Davis Senior High", image: "/pics/VamsiChilamkur.jpg" }
   ],
   alumni: [
-    { name: "Ehsan Kazemi", major: "Mechanical and Aerospace Engineering", image: "/sam.jpg" },
+    { name: "Amin Ghafourian", major: "Postdoctoral Associate", image: "/pics/AminGhafourianMomenzadeh.jpeg" },
+    { name: "Ehsan Kazemi", major: "Postdoctoral Associate", image: "/sam.jpg" },
     { name: "Mehita Achuthan", major: "Computer Science", image: "/pics/MehitaAchuthan.jpg" },
     { name: "Al Arsh Basheer", major: "Mechanical and Aerospace Engineering", image: "/pics/AlArshBasheer.jpg" },
     { name: "Gautama Bharadwaj", major: "Electrical and Computer Engineering", image: "/pics/GautamaBharadwaj.jpg" },
@@ -112,9 +115,14 @@ export default function People() {
       {/* Group Photo */}
       <section className="px-6 md:px-10 pb-20">
         <div className="w-full max-w-5xl mx-auto">
-          <img 
-            src="/group.jpeg"
+          <Image 
+            src="/group_optimized.jpg"
             alt="LARA Lab research team" 
+            width={1000}
+            height={600}
+            priority
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAhEQACAQIEBwAAAAAAAAAAAAABAgMABAUGEiEiMWGRkv/aAAwDAQACEQMRAD8A0XGARPlQHhAhAAOlNGAbA8E8gv8A0/mQBxD4KZwMzCIA/9k="
             className="w-full h-[500px] rounded-md object-cover object-top"
           />
         </div>
@@ -127,9 +135,11 @@ export default function People() {
             <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Director</h2>
             <div className="flex flex-col md:flex-row gap-12">
               <div className="md:w-1/4">
-                <img 
+                <Image 
                   src={people.director[0].image}
                   alt={people.director[0].name}
+                  width={200}
+                  height={200}
                   className="w-full aspect-square object-cover rounded-lg"
                 />
               </div>
@@ -147,15 +157,17 @@ export default function People() {
             </div>
           </section>
 
-          {/* Post-doctoral Fellows */}
+          {/* Research Scientists */}
           <section className="py-16 border-t border-gray-100">
-            <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Post-doctoral Fellows</h2>
+            <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Research Scientists</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
-              {people.postdoctoralFellows.map((person) => (
+              {people.researchScientists.map((person) => (
                 <div key={person.name} className="flex gap-4 items-start">
-                  <img
+                  <Image
                     src={person.image}
                     alt={person.name}
+                    width={96}
+                    height={96}
                     className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
                   />
                   <div>
@@ -167,15 +179,42 @@ export default function People() {
             </div>
           </section>
 
+          {/* Post-doctoral Fellows */}
+          {/* Currently no post-doctoral fellows */}
+          {/*
+          {people.postdoctoralFellows.length > 0 && (
+            <section className="py-16 border-t border-gray-100">
+              <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Post-doctoral Fellows</h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
+                {people.postdoctoralFellows.map((person) => (
+                  <div key={person.name} className="flex gap-4 items-start">
+                    <img
+                      src={person.image}
+                      alt={person.name}
+                      className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                    />
+                    <div>
+                      <h3 className="text-[15px] font-medium">{person.name}</h3>
+                      <p className="text-[13px] text-gray-600 mt-1">{person.major}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+          */}
+
           {/* PhD Students */}
           <section className="py-16 border-t border-gray-100">
             <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">PhD Students</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
               {people.phdStudents.map((person) => (
                 <div key={person.name} className="flex gap-4 items-start">
-                  <img
+                  <Image
                     src={person.image}
                     alt={person.name}
+                    width={96}
+                    height={96}
                     className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
                   />
                   <div>
@@ -193,9 +232,11 @@ export default function People() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
               {people.mastersStudents.map((person) => (
                 <div key={person.name} className="flex gap-4 items-start">
-                  <img
+                  <Image
                     src={person.image}
                     alt={person.name}
+                    width={96}
+                    height={96}
                     className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
                   />
                   <div>
@@ -213,9 +254,11 @@ export default function People() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
               {people.undergraduateResearchers.map((person) => (
                 <div key={person.name} className="flex gap-4 items-start">
-                  <img
+                  <Image
                     src={person.image}
                     alt={person.name}
+                    width={96}
+                    height={96}
                     className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
                   />
                   <div>

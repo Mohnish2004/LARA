@@ -1,5 +1,6 @@
 "use client";
 import BlurFade from "@/components/magicui/blur-fade";
+import Image from "next/image";
 import Footer from "@/components/footer";
 // export const metadata = {
 //   title: "publications",
@@ -24,9 +25,11 @@ export default function Contact() {
               </p>
             </div>
             <div className="w-full md:w-1/3 aspect-[4/3]">
-              <img 
-                src="/h1.png"
+              <Image 
+                src="/h1_optimized.jpg"
                 alt="LARA Lab environment" 
+                width={500}
+                height={375}
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>

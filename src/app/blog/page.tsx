@@ -1,6 +1,10 @@
+import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
-import { getBlogPosts } from "@/data/blog";
+import { Badge } from "@/components/ui/badge";
+import { DATA } from "@/data/resume";
 import Link from "next/link";
+import Image from "next/image";
+import { getBlogPosts } from "@/data/blog";
 import Footer from "@/components/footer";
 
 export const metadata = {
@@ -78,9 +82,11 @@ export default async function BlogPage() {
                     >
                       {/* Thumbnail */}
                       <div className="w-48 h-32 shrink-0 overflow-hidden rounded-lg bg-gray-100">
-                        <img
+                        <Image
                           src={news.image || "https://images.ctfassets.net/kftzwdyauwt9/32cmTSUIF5POX5FMuoHJwO/be8b42b8016957ca28e07274f05f1d3d/stangel-2022-0527.webp"}
                           alt={news.title}
+                          width={192}
+                          height={128}
                           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
@@ -131,9 +137,11 @@ export default async function BlogPage() {
                     >
                       {/* Image */}
                       <div className="aspect-[4/3] mb-6 overflow-hidden rounded-lg bg-gray-100">
-                        <img
+                        <Image
                           src={post.metadata.thumbnail || post.metadata.image || "https://images.ctfassets.net/kftzwdyauwt9/32cmTSUIF5POX5FMuoHJwO/be8b42b8016957ca28e07274f05f1d3d/stangel-2022-0527.webp"}
                           alt={post.metadata.title}
+                          width={640}
+                          height={480}
                           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
