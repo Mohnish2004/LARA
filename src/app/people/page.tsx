@@ -22,6 +22,7 @@ const people = {
     { name: "Mahdi Naddaf", major: "Mechanical and Aerospace Engineering", image: "/pics/mahdi.png" }
   ],
   postdoctoralFellows: [
+    { name: "Amin Ghafourian", major: "Postdoctoral Associate", image: "/pics/AminGhafourianMomenzadeh.jpeg" }
   ],
   phdStudents: [
     { name: "Ziba Fazel", major: "Mechanical and Aerospace Engineering", image: "/pics/ZibaFazel.jpg" },
@@ -59,7 +60,7 @@ const people = {
     { name: "Vamsi Chilamkur", major: "Davis Senior High", image: "/pics/VamsiChilamkur.jpg" }
   ],
   alumni: [
-    { name: "Amin Ghafourian", major: "Postdoctoral Associate", image: "/pics/AminGhafourianMomenzadeh.jpeg" },
+    { name: "Amin Ghorbanpour", major: "Postdoctoral Associate", image: "/sam.jpg" },
     { name: "Ehsan Kazemi", major: "Postdoctoral Associate", image: "/sam.jpg" },
     { name: "Mehita Achuthan", major: "Computer Science", image: "/pics/MehitaAchuthan.jpg" },
     { name: "Al Arsh Basheer", major: "Mechanical and Aerospace Engineering", image: "/pics/AlArshBasheer.jpg" },
@@ -180,29 +181,26 @@ export default function People() {
           </section>
 
           {/* Post-doctoral Fellows */}
-          {/* Currently no post-doctoral fellows */}
-          {/*
-          {people.postdoctoralFellows.length > 0 && (
-            <section className="py-16 border-t border-gray-100">
-              <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Post-doctoral Fellows</h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
-                {people.postdoctoralFellows.map((person) => (
-                  <div key={person.name} className="flex gap-4 items-start">
-                    <img
-                      src={person.image}
-                      alt={person.name}
-                      className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
-                    />
-                    <div>
-                      <h3 className="text-[15px] font-medium">{person.name}</h3>
-                      <p className="text-[13px] text-gray-600 mt-1">{person.major}</p>
-                    </div>
+          <section className="py-16 border-t border-gray-100">
+            <h2 className="text-[17px] font-medium mb-12 uppercase tracking-wider">Post-doctoral Fellows</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-16">
+              {people.postdoctoralFellows.map((person) => (
+                <div key={person.name} className="flex gap-4 items-start">
+                  <Image
+                    src={person.image}
+                    alt={person.name}
+                    width={96}
+                    height={96}
+                    className="w-24 h-24 object-cover rounded-lg flex-shrink-0"
+                  />
+                  <div>
+                    <h3 className="text-[15px] font-medium">{person.name}</h3>
+                    <p className="text-[13px] text-gray-600 mt-1">{person.major}</p>
                   </div>
-                ))}
-              </div>
-            </section>
-          )}
-          */}
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* PhD Students */}
           <section className="py-16 border-t border-gray-100">
