@@ -157,6 +157,35 @@ const people = {
 }
 ```
 
+## Development Workflow
+
+Before pushing changes to main (which auto-deploys to production), always follow these steps:
+
+1. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Test Locally:**
+   ```bash
+   npm run dev
+   ```
+   - Visit http://localhost:3000
+   - Verify all changes work as expected
+   - Test on different screen sizes
+
+3. **Build Check:**
+   ```bash
+   npm run build
+   ```
+   - Ensure build completes without errors
+   - Fix any build warnings
+
+4. **Push to Main:**
+   - Only after successful build
+   - Changes to main branch automatically deploy to production
+   - Monitor deployment status
+
 ## Development Guidelines
 
 1. **Image Optimization:**
