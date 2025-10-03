@@ -28,38 +28,40 @@ const people = {
     { name: "Ziba Fazel", major: "Mechanical and Aerospace Engineering", image: "/pics/ZibaFazel.jpg" },
     { name: "Kai Fukazawa", major: "Mechanical and Aerospace Engineering (MAE)", image: "/pics/KaiFukazawa.jpg" },
     { name: "Dechen Gao", major: "Computer Science", image: "/pics/Dechen.png" },
+    { name: "Ian Chuang", major: "UC Berkeley and UC Davis", image: "/pics/IanChuang.jpg" },
     { name: "Andrew Lee", major: "Computer Science", image: "/pics/andrewlee.png" },
     { name: "Caton Mande", major: "Mechanical and Aerospace Engineering", image: "/pics/CatonMande.jpg" },
     { name: "Ricardo Tapia", major: "Mechanical and Aerospace Engineering", image: "/pics/Ricardo.png" },
     { name: "Arefeh Yavari", major: "Computer Science", image: "/pics/ArefehYavari.png" }
   ],
   mastersStudents: [
-    { name: "Kokul Aananth Kathiravan Kavitha", major: "Mechanical and Aerospace Engineering", image: "/pics/KokulAananthKathiravanKavitha.jpg" },
-    { name: "Ling-Yuan Chen", major: "Mechanical and Aerospace Engineering", image: "/pics/Ling-YuanChen.jpeg" },
-    { name: "Soumyajit Ganguly", major: "Mechanical and Aerospace Engineering", image: "/pics/SoumyajitGanguly.jpg" },
     { name: "Hrushikesh Mathi", major: "Mechanical and Aerospace Engineering", image: "/pics/HrushikeshMathi.jpg" },
     { name: "Kunal Mundada", major: "Computer Science", image: "/pics/KunalMundada.jpeg" },
-    { name: "Mohd Shais Khan", major: "Mechanical and Aerospace Engineering", image: "/pics/MohdShaisKhan.jpg" }
+    { name: "Shannon", major: "Computer Science", image: "/sam.jpg" },
+    { name: "Shashank", major: "Computer Science", image: "/sam.jpg" }
   ],
   undergraduateResearchers: [
-    { name: "Mohnish Gopi", major: "Computer Science", image: "/pics/MohnishGopi.jpg" },
-    { name: "Kiana Amini-Naeini", major: "Cognitive Sciences", image: "/sam.jpg" },
-    { name: "Tyler Beer", major: "Computer Science", image: "/pics/TylerBeer.jpg" },
-    { name: "Justin Chang", major: "Computer Science", image: "/pics/JustinChang.jpeg" },
-    { name: "Yuyang Chen", major: "Mechanical and Aerospace Engineering", image: "/pics/YuyangChen.jpg" },
-    { name: "James Chow", major: "Aerospace Engineering", image: "/pics/JamesChow.jpg" },
-    { name: "Ian Chuang", major: "Computer Science", image: "/pics/IanChuang.jpg" },
-    { name: "Mohamed Elmashad", major: "Computer Science and Economics", image: "/sam.jpg" },
-    { name: "Maxine Genove", major: "Electrical Engineering", image: "/pics/MaxineGenove.jpg" },
-    { name: "Kavya Khare", major: "Electrical and Computer Engineering", image: "/sam.jpg" },
-    { name: "Aryan Mondkar", major: "Mechanical and Aerospace Engineering (MAE)", image: "/pics/AryanMondkar.jpeg" },
-    { name: "Aimee Tieu", major: "Mechanical and Aerospace Engineering", image: "/sam.jpg" },
-    { name: "Xin Wei", major: "Electrical and Computer Engineering", image: "/pics/XinWei.jpg" }
+    { name: "Justin Chang", major: "Computer Science", image: "/pics/JustinChang.jpeg" }
   ],
   highSchoolInterns: [
     { name: "Vamsi Chilamkur", major: "Davis Senior High", image: "/pics/VamsiChilamkur.jpg" }
   ],
   alumni: [
+    { name: "Kokul Aananth Kathiravan Kavitha", major: "Masters in Mechanical and Aerospace Engineering", image: "/pics/KokulAananthKathiravanKavitha.jpg" },
+    { name: "Ling-Yuan Chen", major: "Masters in Mechanical and Aerospace Engineering", image: "/pics/Ling-YuanChen.jpeg" },
+    { name: "Soumyajit Ganguly", major: "Masters in Mechanical and Aerospace Engineering", image: "/pics/SoumyajitGanguly.jpg" },
+    { name: "Mohd Shais Khan", major: "Masters in Mechanical and Aerospace Engineering", image: "/pics/MohdShaisKhan.jpg" },
+    { name: "Mohnish Gopi", major: "Computer Science", image: "/pics/MohnishGopi.jpg" },
+    { name: "Kiana Amini-Naeini", major: "Cognitive Sciences", image: "/sam.jpg" },
+    { name: "Tyler Beer", major: "Computer Science", image: "/pics/TylerBeer.jpg" },
+    { name: "Yuyang Chen", major: "Mechanical and Aerospace Engineering", image: "/pics/YuyangChen.jpg" },
+    { name: "James Chow", major: "Aerospace Engineering", image: "/pics/JamesChow.jpg" },
+    { name: "Mohamed Elmashad", major: "Computer Science and Economics", image: "/sam.jpg" },
+    { name: "Maxine Genove", major: "Electrical Engineering", image: "/pics/MaxineGenove.jpg" },
+    { name: "Kavya Khare", major: "Electrical and Computer Engineering", image: "/sam.jpg" },
+    { name: "Aryan Mondkar", major: "Mechanical and Aerospace Engineering (MAE)", image: "/pics/AryanMondkar.jpeg" },
+    { name: "Aimee Tieu", major: "Mechanical and Aerospace Engineering", image: "/sam.jpg" },
+    { name: "Xin Wei", major: "Electrical and Computer Engineering", image: "/pics/XinWei.jpg" },
     { name: "Amin Ghorbanpour", major: "Postdoctoral Associate", image: "/sam.jpg" },
     { name: "Ehsan Kazemi", major: "Postdoctoral Associate", image: "/sam.jpg" },
     { name: "Mehita Achuthan", major: "Computer Science", image: "/pics/MehitaAchuthan.jpg" },

@@ -1,47 +1,200 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# LARA Website Documentation
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+This document explains how to update and maintain the LARA (Laboratory for AI, Robotics, and Automation) website.
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+## Folder Structure
 
-# Features
+```
+LARA/
+├── public/           # Static assets
+│   ├── publications/ # Publication media (images, videos)
+│   ├── pics/         # Team member photos
+│   └── ...          # Other static assets
+├── content/          # Blog posts and articles (MDX)
+├── src/
+│   ├── app/         # Next.js pages
+│   ├── components/  # React components
+│   └── data/        # Data files (publications, people, etc.)
+```
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+## How to Update Content
 
-# Getting Started Locally
+### 1. Public Folder Organization
 
-1. Clone this repository to your local machine:
+The `public` folder contains all static assets and follows this structure:
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+```
+public/
+├── publications/
+│   ├── images/      # Publication images (.png, .jpg)
+│   ├── videos/      # Demo videos (.mp4)
+│   └── gifs/        # Animations (.gif)
+├── pics/
+│   └── [Name].jpg   # Team member photos
+└── general/         # General website images
+```
 
-2. Move to the cloned directory
+**Best Practices for Media:**
+- Optimize images before uploading
+- Use consistent naming: `FirstnameLastname.jpg` for people
+- For publications: `paper-short-name-year.png`
+- Recommended formats:
+  - Photos: JPG/JPEG
+  - Graphics/UI: PNG
+  - Animations: GIF
+  - Videos: MP4
 
-   ```bash
-   cd portfolio
-   ```
+### 2. Blog Posts (MDX)
 
-3. Install dependencies:
+Blog posts are stored in `/content/` as MDX files.
 
-   ```bash
-   pnpm install
-   ```
+**Creating a New Post:**
+1. Create a new file: `your-post-name.mdx`
+2. Add the following frontmatter:
 
-4. Start the local Server:
+```mdx
+---
+title: "Your Blog Post Title"
+publishedAt: "2025-01-01"
+summary: "Brief description of your post"
+image: "/path/to/image.jpg"  # Optional
+---
 
-   ```bash
-   pnpm dev
-   ```
+## Your Content Here
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+Write your content using Markdown syntax.
 
-# License
+### Code Examples
+\`\`\`python
+def example():
+    return "Hello, World!"
+\`\`\`
+```
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+### 3. Publications
+
+Publications are managed in `/src/data/publications.ts`. Each publication follows this schema:
+
+```typescript
+type Publication = {
+  title: string;
+  authors: string[];
+  year: number;
+  venue: string;
+  type: "journal" | "conference" | "patent" | "preprint";
+  link?: string;
+  citations?: number;
+  media?: {
+    type: "image" | "video";
+    url: string;
+    thumbnail?: string;
+  };
+};
+```
+
+**Adding a New Publication:**
+1. Add media files to `/public/publications/`
+2. Add publication entry to `publications.ts`:
+
+```typescript
+{
+  title: "Your Paper Title",
+  authors: ["Author 1", "Author 2"],
+  year: 2025,
+  venue: "Conference/Journal Name",
+  type: "conference",  // or "journal", "patent", "preprint"
+  link: "https://paper-url.com",
+  citations: 0,  // optional
+  media: {
+    type: "image",  // or "video"
+    url: "/publications/your-image.png",
+    thumbnail: "/publications/thumbnail.png"  // optional
+  }
+}
+```
+
+**Note:** Patents are automatically filtered for the patents page using:
+```typescript
+const patents = ALL_PUBLICATIONS.filter(pub => pub.type === "patent");
+```
+
+### 4. People
+
+Team members are managed in `/src/app/people/page.tsx`. The file contains different categories of team members:
+
+```typescript
+const people = {
+  director: [...],
+  researchScientists: [...],
+  postdoctoralFellows: [...],
+  phdStudents: [...],
+  mastersStudents: [...],
+  undergraduateResearchers: [...],
+  highSchoolInterns: [...],
+  alumni: [...]
+};
+```
+
+**Adding a New Team Member:**
+1. Add photo to `/public/pics/` (recommended size: 400x400px)
+2. Add entry to appropriate category:
+
+```typescript
+{
+  name: "Full Name",
+  major: "Field of Study",
+  image: "/pics/FirstnameLastname.jpg"
+}
+```
+
+**For Director:**
+```typescript
+{
+  name: "Name",
+  title: "Director, LARA Lab",
+  major: "Department(s)",
+  image: "/path/to/image.jpg"
+}
+```
+
+## Development Guidelines
+
+1. **Image Optimization:**
+   - Use the optimize script: `./scripts/optimize-images.sh`
+   - Keep images under 500KB
+   - Use appropriate formats for content type
+
+2. **Content Updates:**
+   - Keep publications in chronological order (newest first)
+   - Maintain consistent naming conventions
+   - Update news items regularly
+   - Archive old content appropriately
+
+3. **Code Style:**
+   - Follow TypeScript best practices
+   - Use consistent formatting
+   - Comment complex logic
+   - Keep components modular
+
+## Troubleshooting
+
+Common issues and solutions:
+
+1. **Images not showing:**
+   - Verify file exists in correct location
+   - Check file permissions
+   - Ensure correct path in code
+
+2. **Publication not appearing:**
+   - Check type is correct
+   - Verify media paths
+   - Ensure proper JSON format
+
+3. **Blog post not visible:**
+   - Verify MDX frontmatter format
+   - Check file extension is .mdx
+   - Ensure date is not in future
+
+## Contact
+
+For technical issues or questions, contact the development team at [contact@email.com]
